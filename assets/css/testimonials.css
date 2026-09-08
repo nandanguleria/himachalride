@@ -1,0 +1,611 @@
+/* =========================================================
+   HIMACHALRIDE — TESTIMONIALS
+   ========================================================= */
+
+.testimonials-section {
+    position: relative;
+    overflow: hidden;
+
+    background: #f5f3ed;
+
+    padding: 85px 0 70px;
+
+    border-top: 1px solid rgba(23, 56, 43, 0.08);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.testimonials-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.testimonials-heading {
+    text-align: center;
+
+    padding: 0 24px;
+
+    margin-bottom: 48px;
+}
+
+
+.testimonials-heading .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #a47b3c;
+}
+
+
+.testimonials-heading .section-eyebrow::before,
+.testimonials-heading .section-eyebrow::after {
+    content: "";
+
+    width: 25px;
+    height: 1px;
+
+    background: #b28a4a;
+}
+
+
+.testimonials-heading h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+    font-weight: 600;
+
+    color: #17382b;
+}
+
+
+.testimonials-heading p {
+    max-width: 560px;
+
+    margin: 17px auto 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #6b766f;
+}
+
+
+/* =========================================================
+   CAROUSEL
+   ========================================================= */
+
+.testimonials-carousel {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 10px 0 18px;
+}
+
+
+.testimonials-track {
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 14px;
+
+    width: max-content;
+
+    will-change: transform;
+
+    transition: transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+/* =========================================================
+   REVIEW CARD
+   ========================================================= */
+
+.review-card {
+    position: relative;
+
+    flex: 0 0 390px;
+
+    min-height: 300px;
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(23, 56, 43, 0.10);
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 4px 20px rgba(23, 56, 43, 0.035);
+
+    opacity: 0.72;
+
+    transform: scale(0.94);
+
+    transition:
+        flex-basis 0.65s ease,
+        opacity 0.5s ease,
+        transform 0.65s ease,
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* =========================================================
+   ACTIVE CARD
+   ========================================================= */
+
+.review-card.is-active {
+    flex-basis: 690px;
+
+    min-height: 320px;
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    background: #17382b;
+
+    border-color: #17382b;
+
+    box-shadow:
+        0 18px 45px rgba(23, 56, 43, 0.13);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.review-stars {
+    margin-bottom: 20px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #b28a4a;
+}
+
+
+.review-card.is-active .review-stars {
+    color: #d3ad70;
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+   ========================================================= */
+
+.review-card blockquote {
+    margin: 0 0 28px;
+
+    max-width: 570px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.55;
+
+    font-weight: 400;
+
+    letter-spacing: -0.015em;
+
+    font-style: normal;
+
+    color: #33423a;
+}
+
+
+.review-card.is-active blockquote {
+    max-width: 610px;
+
+    font-size: 24px;
+
+    line-height: 1.48;
+
+    color: #f5f2e9;
+}
+
+
+/* =========================================================
+   AUTHOR
+   ========================================================= */
+
+.review-author {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.review-avatar {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8eee9;
+
+    color: #17382b;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.review-card.is-active .review-avatar {
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+}
+
+
+.review-author strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #203229;
+}
+
+
+.review-card.is-active .review-author strong {
+    color: #ffffff;
+}
+
+
+.review-author span {
+    display: block;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.03em;
+
+    color: #7c8780;
+}
+
+
+.review-card.is-active .review-author span {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+
+/* =========================================================
+   SMALL CARD NUMBER / DECORATION
+   ========================================================= */
+
+.review-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    right: -45px;
+    bottom: -55px;
+
+    border: 1px solid rgba(23, 56, 43, 0.06);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.review-card.is-active::after {
+    border-color: rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   GOOGLE REVIEW BUTTON
+   ========================================================= */
+
+.google-review-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 34px;
+
+    padding: 0 20px;
+}
+
+
+.google-review-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 300px;
+
+    padding: 14px 22px;
+
+    background: #17382b;
+
+    color: #ffffff;
+
+    border: 1px solid #17382b;
+
+    border-radius: 2px;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.google-review-btn:hover {
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    color: #17382b;
+
+    box-shadow:
+        0 12px 28px rgba(23, 56, 43, 0.12);
+}
+
+
+.google-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+.google-star {
+    color: #d3ad70;
+
+    font-size: 14px;
+}
+
+
+.google-review-btn:hover .google-star {
+    color: #b28a4a;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .review-card {
+        flex-basis: 350px;
+    }
+
+    .review-card.is-active {
+        flex-basis: 600px;
+    }
+
+    .review-card.is-active blockquote {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .testimonials-section {
+        padding: 65px 0 55px;
+    }
+
+
+    .testimonials-heading {
+        margin-bottom: 32px;
+    }
+
+
+    .testimonials-heading h2 {
+        font-size: 40px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .testimonials-heading p {
+        max-width: 420px;
+
+        margin-top: 14px;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    .testimonials-carousel {
+        padding: 5px 0 12px;
+    }
+
+
+    .testimonials-track {
+        gap: 10px;
+    }
+
+
+    .review-card {
+        flex-basis: calc(100vw - 70px);
+
+        min-height: 270px;
+
+        padding: 24px;
+
+        transform: scale(0.96);
+    }
+
+
+    .review-card.is-active {
+        flex-basis: calc(100vw - 45px);
+
+        min-height: 290px;
+
+        transform: scale(1);
+    }
+
+
+    .review-card blockquote {
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+
+    .review-card.is-active blockquote {
+        font-size: 20px;
+
+        line-height: 1.48;
+    }
+
+
+    .review-stars {
+        font-size: 13px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .review-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .review-author strong {
+        font-size: 12px;
+    }
+
+
+    .review-author span {
+        font-size: 10px;
+    }
+
+
+    .google-review-wrapper {
+        margin-top: 28px;
+    }
+
+
+    .google-review-btn {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 14px 18px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .testimonials-track,
+    .review-card,
+    .google-review-btn {
+        transition: none !important;
+    }
+
+}

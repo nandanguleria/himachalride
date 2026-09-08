@@ -1,0 +1,1128 @@
+/* =========================================================
+   HIMACHALRIDE
+   MODERN HERO — V2
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: calc(100svh - 82px);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #123b34;
+    color: #fff;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6, 37, 31, 0.92) 0%,
+            rgba(6, 37, 31, 0.68) 35%,
+            rgba(6, 37, 31, 0.24) 70%,
+            rgba(6, 37, 31, 0.18) 100%
+        );
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.04);
+
+    animation: heroZoom 12s ease-out forwards;
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1.08);
+    }
+
+    to {
+        transform: scale(1.02);
+    }
+}
+
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+   ========================================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: -230px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(231, 190, 103, 0.10);
+
+    filter: blur(10px);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+
+    width: min(1280px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding:
+        100px 0
+        55px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.hero-content {
+    width: min(720px, 65%);
+
+    animation:
+        heroContentIn 800ms
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+@keyframes heroContentIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TOP LABEL
+   ========================================================= */
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.22);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(14px);
+
+    color:
+        rgba(255,255,255,0.88);
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    letter-spacing: 0.6px;
+}
+
+.badge-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #e5bd6b;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(229,189,107,0.13);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.hero h1 {
+
+    margin-top: 25px;
+
+    max-width: 850px;
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            62px,
+            7.5vw,
+            112px
+        );
+
+    line-height: 0.88;
+
+    letter-spacing: -6px;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #e5bd6b;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+
+    max-width: 510px;
+
+    margin-top: 28px;
+
+    color:
+        rgba(255,255,255,0.73);
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 31px;
+}
+
+.hero-btn {
+
+    min-height: 52px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding:
+        0 18px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    transition:
+        transform 200ms ease,
+        background 200ms ease,
+        box-shadow 200ms ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Primary */
+
+.hero-btn-primary {
+
+    background: #e5bd6b;
+
+    color: #173d35;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,0.20);
+}
+
+.hero-btn-primary:hover {
+    background: #f0ce82;
+
+    box-shadow:
+        0 17px 38px
+        rgba(0,0,0,0.25);
+}
+
+.hero-btn-icon {
+
+    width: 27px;
+    height: 27px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #173d35;
+
+    color: #fff;
+
+    font-size: 14px;
+}
+
+
+/* Secondary */
+
+.hero-btn-secondary {
+
+    border:
+        1px solid
+        rgba(255,255,255,0.30);
+
+    background:
+        rgba(255,255,255,0.06);
+
+    backdrop-filter: blur(12px);
+
+    color: #fff;
+}
+
+.hero-btn-secondary:hover {
+    background:
+        rgba(255,255,255,0.14);
+}
+
+
+/* =========================================================
+   RIGHT SIDE INFO
+   ========================================================= */
+
+.hero-side {
+
+    position: relative;
+
+    width: 220px;
+
+    align-self: flex-end;
+
+    margin-bottom: 15px;
+
+    padding: 19px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.18);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.12);
+}
+
+.hero-side-line {
+
+    width: 34px;
+    height: 2px;
+
+    margin-bottom: 15px;
+
+    background: #e5bd6b;
+}
+
+.hero-side p {
+
+    color:
+        rgba(255,255,255,0.62);
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+    letter-spacing: 1.5px;
+
+    margin: 0;
+}
+
+.hero-side strong {
+
+    display: block;
+
+    color: #fff;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   BOOKING AREA
+   ========================================================= */
+
+.hero-booking-wrapper {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: min(
+        1280px,
+        calc(100% - 48px)
+    );
+
+    margin: 0 auto 38px;
+}
+
+
+.hero-booking {
+
+    padding: 20px 21px 21px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.30);
+
+    border-radius: 23px;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    color: #23332f;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.22);
+
+    backdrop-filter: blur(20px);
+
+    animation:
+        bookingIn 900ms
+        250ms
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+@keyframes bookingIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   BOOKING HEADER
+   ========================================================= */
+
+.booking-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 3px
+        15px;
+}
+
+.booking-heading span {
+
+    color: #a27b36;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.booking-heading h2 {
+
+    margin-top: 4px;
+
+    color: #173d35;
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.15;
+
+    font-weight: 750;
+}
+
+
+.booking-24 {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+}
+
+.booking-24 strong {
+
+    color: #173d35;
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+.booking-24 small {
+
+    margin-top: 4px;
+
+    color: #89938f;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   BOOKING FIELDS
+   ========================================================= */
+
+.booking-fields {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1px
+        1fr
+        1px
+        1fr
+        180px;
+
+    align-items: center;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid
+        rgba(15,61,53,0.09);
+
+    gap: 0;
+}
+
+
+.booking-field {
+
+    padding:
+        0 15px;
+}
+
+.booking-field:first-child {
+    padding-left: 5px;
+}
+
+
+.booking-field label {
+
+    display: block;
+
+    color: #8a9590;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.field-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 6px;
+}
+
+
+.field-icon {
+
+    color: #c29442;
+
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+.booking-field select,
+.booking-field input {
+
+    width: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: #25332f;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.booking-field select {
+    cursor: pointer;
+}
+
+
+.booking-divider {
+
+    width: 1px;
+
+    height: 34px;
+
+    background:
+        rgba(15,61,53,0.10);
+}
+
+
+/* =========================================================
+   BOOK BUTTON
+   ========================================================= */
+
+.booking-search {
+
+    min-height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding:
+        0 14px
+        0 20px;
+
+    border: 0;
+
+    border-radius: 14px;
+
+    background: #123f36;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 180ms ease,
+        background 180ms ease;
+}
+
+
+.booking-search:hover {
+
+    background: #0b302a;
+
+    transform: translateY(-2px);
+}
+
+
+.booking-search strong {
+
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #e5bd6b;
+
+    color: #173d35;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   SCROLL
+   ========================================================= */
+
+.hero-scroll {
+
+    position: absolute;
+
+    right: 25px;
+    bottom: 46px;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color:
+        rgba(255,255,255,0.55);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    writing-mode: vertical-rl;
+}
+
+.scroll-line {
+
+    width: 1px;
+
+    height: 45px;
+
+    background: #e5bd6b;
+}
+
+
+/* =========================================================
+   NEXT SECTION
+   ========================================================= */
+
+.home-placeholder {
+
+    min-height: 520px;
+
+    display: grid;
+
+    place-content: center;
+
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background: #f7f5ef;
+}
+
+.home-placeholder span {
+
+    color: #bb8d3d;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.home-placeholder h2 {
+
+    margin-top: 14px;
+
+    color: #123f36;
+
+    font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(42px, 6vw, 76px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .hero-container {
+        padding-top: 75px;
+    }
+
+    .hero-content {
+        width: 78%;
+    }
+
+    .hero-side {
+        display: none;
+    }
+
+    .booking-fields {
+
+        grid-template-columns:
+            1fr
+            1px
+            1fr
+            1px
+            1fr;
+    }
+
+    .booking-search {
+
+        grid-column:
+            1 / -1;
+
+        margin-top: 17px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .hero {
+
+        min-height:
+            auto;
+    }
+
+
+    .hero-background img {
+
+        object-position:
+            62% center;
+    }
+
+
+    .hero-background::after {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(6,37,31,0.62) 0%,
+                rgba(6,37,31,0.80) 50%,
+                rgba(6,37,31,0.96) 100%
+            );
+    }
+
+
+    .hero-container {
+
+        width:
+            calc(100% - 30px);
+
+        min-height:
+            auto;
+
+        flex: none;
+
+        padding:
+            75px 0
+            50px;
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+    }
+
+
+    .hero h1 {
+
+        margin-top: 20px;
+
+        font-size:
+            clamp(
+                50px,
+                14vw,
+                76px
+            );
+
+        letter-spacing:
+            -3px;
+    }
+
+
+    .hero-description {
+
+        max-width: 480px;
+
+        margin-top: 22px;
+
+        font-size: 13px;
+    }
+
+
+    .hero-buttons {
+
+        margin-top: 24px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .hero-btn {
+
+        min-height: 48px;
+    }
+
+
+    .hero-booking-wrapper {
+
+        width:
+            calc(100% - 30px);
+
+        margin:
+            0 auto
+            25px;
+    }
+
+
+    .hero-booking {
+
+        padding:
+            17px;
+
+        border-radius:
+            20px;
+    }
+
+
+    .booking-heading {
+
+        padding-bottom:
+            12px;
+    }
+
+
+    .booking-heading h2 {
+
+        font-size:
+            15px;
+    }
+
+
+    .booking-fields {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        padding-top:
+            5px;
+    }
+
+
+    .booking-field {
+
+        padding:
+            13px 2px;
+
+        border-bottom:
+            1px solid
+            rgba(15,61,53,0.09);
+    }
+
+
+    .booking-field:first-child {
+
+        padding-left:
+            2px;
+    }
+
+
+    .booking-divider {
+
+        display:
+            none;
+    }
+
+
+    .booking-search {
+
+        width:
+            100%;
+
+        margin-top:
+            11px;
+    }
+
+
+    .hero-scroll {
+
+        display:
+            none;
+    }
+
+
+    .home-placeholder {
+
+        min-height:
+            400px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .hero-container {
+
+        padding-top:
+            58px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            49px;
+
+        letter-spacing:
+            -2.5px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
+
+    .hero-btn {
+
+        width:
+            100%;
+    }
+
+
+    .booking-heading h2 {
+
+        font-size:
+            14px;
+    }
+}

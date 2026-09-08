@@ -1,0 +1,852 @@
+/* =========================================================
+   HIMACHALRIDE — COMMON HEADER / FOOTER
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER — FIXED FULL WIDTH GLASS NAVBAR
+   ========================================================= */
+
+.site-header {
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 99999;
+
+    background: rgba(15, 38, 32, 0.22);
+
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+
+    transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   HEADER — SCROLLED STATE
+   ========================================================= */
+
+.site-header.scrolled {
+    background: rgba(10, 32, 27, 0.92);
+
+    border-bottom-color: rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+
+/* =========================================================
+   HEADER INNER
+   ========================================================= */
+
+.header-inner {
+    width: 100%;
+    max-width: none;
+
+    min-height: 82px;
+
+    margin: 0;
+
+    padding: 0 56px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    position: relative;
+    z-index: 2;
+
+    transition: min-height 0.3s ease;
+}
+
+
+/* Smaller navbar after scrolling */
+
+.site-header.scrolled .header-inner {
+    min-height: 70px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   OLD HR LOGO MARK
+   ========================================================= */
+
+.brand-mark {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-weight: 800;
+    font-size: 13px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.brand:hover .brand-mark {
+    background: rgba(255, 255, 255, 0.13);
+
+    border-color: rgba(255, 255, 255, 0.75);
+
+    transform: rotate(-4deg);
+}
+
+
+/* =========================================================
+   BRAND NAME
+   ========================================================= */
+
+.brand-name {
+    color: #ffffff;
+
+    font-family: "Manrope", sans-serif;
+
+    font-weight: 800;
+
+    font-size: 21px;
+
+    letter-spacing: -0.7px;
+
+    text-decoration: none;
+}
+
+
+.brand-name span {
+    color: #e5bd6b;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+   ========================================================= */
+
+.main-nav {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+}
+
+
+.main-nav a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   GOLD UNDERLINE
+   ========================================================= */
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -8px;
+
+    height: 1px;
+
+    background: #e5bd6b;
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition: transform 0.25s ease;
+}
+
+
+.main-nav a:hover {
+    color: #ffffff;
+}
+
+
+.main-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   ACTIVE LINK
+   ========================================================= */
+
+.main-nav a.active {
+    color: #ffffff;
+}
+
+
+.main-nav a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   BOOK NOW BUTTON
+   ========================================================= */
+
+.header-book-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    color: #123f36;
+
+    padding: 12px 20px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.header-book-btn:hover {
+    background: #e5bd6b;
+
+    color: #123f36;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+.menu-toggle span {
+    display: block;
+
+    width: 25px;
+    height: 2px;
+
+    margin: 5px 0;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: var(--primary-dark);
+
+    color: rgba(255, 255, 255, 0.78);
+
+    padding: 42px 0 0;
+}
+
+
+.footer-inner {
+    width: min(1240px, calc(100% - 40px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 35px;
+
+    padding-bottom: 18px;
+
+    /* Important:
+       Keeps all footer columns aligned at the top. */
+    align-items: start;
+}
+
+
+.site-footer .brand-name {
+    color: var(--white);
+}
+
+
+.site-footer .brand-name span {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+   ========================================================= */
+
+/*
+   Negative margin actually reduces the grid row height.
+   This moves the logo + description upward AND removes
+   the unnecessary space underneath the brand column.
+*/
+
+.footer-brand {
+    margin-top: -24px;
+    align-self: start;
+}
+
+
+.footer-brand p {
+    max-width: 320px;
+
+    margin-top: 6px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+   ========================================================= */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    font-size: 14px;
+
+    align-self: start;
+}
+
+
+.footer-column h3 {
+    color: var(--white);
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.footer-column a {
+    transition:
+        color 0.25s ease;
+}
+
+
+.footer-column a:hover {
+    color: var(--accent-light);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    width: min(1240px, calc(100% - 40px));
+
+    margin: auto;
+
+    min-height: 42px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 8px 0;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DEVELOPER CREDIT
+   ========================================================= */
+
+.footer-developer {
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    white-space: nowrap;
+}
+
+
+.footer-developer strong {
+    color: rgba(255, 255, 255, 0.90);
+
+    font-weight: 700;
+
+    margin-left: 3px;
+}
+
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header-inner {
+        padding: 0 40px;
+    }
+
+
+    .main-nav {
+        gap: 20px;
+    }
+
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .header-inner {
+        width: 100%;
+
+        min-height: 70px;
+
+        padding: 0 24px;
+    }
+
+
+    .site-header.scrolled .header-inner {
+        min-height: 64px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE NAVIGATION
+       ----------------------------------------------------- */
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+
+        top: calc(100% + 8px);
+
+        left: 12px;
+        right: 12px;
+
+        width: auto;
+
+        padding: 22px;
+
+        background: rgba(12, 42, 35, 0.97);
+
+        border: 1px solid rgba(255, 255, 255, 0.14);
+
+        border-radius: 14px;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.22);
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .main-nav.is-open {
+        display: flex;
+    }
+
+
+    .main-nav a {
+        color: rgba(255, 255, 255, 0.90);
+
+        font-size: 15px;
+    }
+
+
+    .main-nav a::after {
+        bottom: -4px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU BUTTON
+       ----------------------------------------------------- */
+
+    .menu-toggle {
+        display: block;
+
+        margin-left: auto;
+    }
+
+
+    /* -----------------------------------------------------
+       HIDE BOOK BUTTON
+       ----------------------------------------------------- */
+
+    .header-book-btn {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+
+        padding-bottom: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .header-inner {
+        width: 100%;
+
+        min-height: 64px;
+
+        padding: 0 18px;
+    }
+
+
+    .site-header.scrolled .header-inner {
+        min-height: 60px;
+    }
+
+
+    /* -----------------------------------------------------
+       BRAND
+       ----------------------------------------------------- */
+
+    .brand {
+        gap: 8px;
+    }
+
+
+    .brand-mark {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 12px;
+    }
+
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE DROPDOWN
+       ----------------------------------------------------- */
+
+    .main-nav {
+        left: 10px;
+
+        right: 10px;
+
+        padding: 20px;
+
+        border-radius: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    .site-footer {
+        padding-top: 28px;
+    }
+
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        padding-bottom: 18px;
+    }
+
+
+    /*
+       Less upward movement on mobile so the logo
+       doesn't get too close to the footer edge.
+    */
+
+    .footer-brand {
+        margin-top: -12px;
+    }
+
+
+    .footer-bottom {
+        min-height: 48px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 10px 0;
+
+        gap: 7px;
+    }
+
+
+    .footer-developer {
+        order: 2;
+
+        white-space: normal;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER — HIMALAYAN MOUNTAIN BACKGROUND
+   ========================================================= */
+
+.site-footer {
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #123f36;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(18, 63, 54, 0.78),
+            rgba(10, 43, 36, 0.88)
+        ),
+        url("../images/destinations/mountain-silhouette.png");
+
+    background-repeat: no-repeat;
+
+    background-position:
+        center center,
+        center bottom;
+
+    background-size:
+        cover,
+        cover;
+}
+
+
+/* Footer content stays above background */
+
+.site-footer > * {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   FINAL FOOTER OVERRIDES
+   ========================================================= */
+
+/*
+   Desktop:
+   Move brand block upward without leaving its original
+   layout space behind.
+*/
+
+@media (min-width: 601px) {
+
+    .footer-brand {
+        margin-top: -24px;
+    }
+
+    .footer-brand p {
+        margin-top: 6px;
+        line-height: 1.5;
+    }
+
+    .footer-inner {
+        padding-bottom: 10px;
+    }
+
+}
+
+
+/*
+   Developer credit stays centered between the two
+   footer-side information blocks.
+*/
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   MOBILE FINAL OVERRIDES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer-brand {
+        margin-top: -12px;
+    }
+
+    .footer-inner {
+        gap: 22px;
+        padding-bottom: 12px;
+    }
+
+    .footer-bottom {
+        min-height: 48px;
+        padding: 10px 0;
+        gap: 7px;
+
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-developer {
+        order: 2;
+        white-space: normal;
+    }
+
+}
