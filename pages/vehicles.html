@@ -56,7 +56,7 @@
     >
     <meta
         name="twitter:image"
-        content="https://himachalride.com/assets/images/destinations/himachal-hero.jpg.png"
+        content="https://himachalride.com/assets/images/destinations/himachal-hero.jpg.webp"
     >
 
     <!-- Google Fonts -->
@@ -261,7 +261,7 @@
 
             <div class="vehicles-hero-image">
                 <img
-                    src="../assets/images/destinations/urbania-2.png"
+                    src="../assets/images/destinations/urbania-2.webp"
                     alt="Himachal taxi vehicle for mountain travel in Himachal Pradesh">
             </div>
 
@@ -359,7 +359,7 @@
                         <div class="vehicle-image">
 
                             <img
-                                src="../assets/images/destinations/traveller-2.png"
+                                src="../assets/images/destinations/traveller-2.webp"
                                 alt="Tempo Traveller taxi for group travel in Himachal Pradesh">
 
                             <span class="vehicle-number">01</span>
@@ -408,7 +408,7 @@
                         <div class="vehicle-image">
 
                             <img
-                                src="../assets/images/destinations/crysta.png"
+                                src="../assets/images/destinations/crysta.webp"
                                 alt="Toyota Innova Crysta taxi for family and outstation travel in Himachal Pradesh">
 
                             <span class="vehicle-number">02</span>
@@ -457,7 +457,7 @@
                         <div class="vehicle-image">
 
                             <img
-                                src="../assets/images/destinations/urbania-3.png"
+                                src="../assets/images/destinations/urbania-3.webp"
                                 alt="Force Urbania for group travel and tours in Himachal Pradesh">
 
                             <span class="vehicle-number">03</span>
@@ -506,7 +506,7 @@
                         <div class="vehicle-image">
 
                             <img
-                                src="../assets/images/destinations/dzire-3.png"
+                                src="../assets/images/destinations/dzire-3.webp"
                                 alt="Maruti Suzuki Swift Dzire taxi for travel in Himachal Pradesh">
 
                             <span class="vehicle-number">04</span>
@@ -555,7 +555,7 @@
                         <div class="vehicle-image">
 
                             <img
-                                src="../assets/images/destinations/ertiga.png"
+                                src="../assets/images/destinations/ertiga.webp"
                                 alt="Maruti Suzuki Ertiga taxi for family travel in Himachal Pradesh">
 
                             <span class="vehicle-number">05</span>
@@ -690,147 +690,279 @@
     <script src="../assets/js/main.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
 
-            const galleries = {
-                traveller: {
-                    title: "Traveller",
-                    images: [
-                        "traveller.png",
-                        "traveller-2.png",
-                        "traveller-3.png"
-                    ]
-                },
+        const galleries = {
+            traveller: {
+                title: "Traveller",
+                images: [
+                    "traveller.webp",
+                    "traveller-2.webp",
+                    "traveller-3.webp"
+                ]
+            },
 
-                crysta: {
-                    title: "Innova Crysta",
-                    images: [
-                        "crysta.png",
-                        "crysta-2.png",
-                        "crysta-3.png",
-                        "crysta-4.jpeg"
-                    ]
-                },
+            crysta: {
+                title: "Innova Crysta",
+                images: [
+                    "crysta.webp",
+                    "crysta-2.webp",
+                    "crysta-3.webp",
+                    "crysta-4.webp"
+                ]
+            },
 
-                urbania: {
-                    title: "Urbania",
-                    images: [
-                        "urbania.jpeg",
-                        "urbania-2.png",
-                        "urbania-3.png",
-                        "urbania-4.png",
-                        "urbania-5.jpeg"
-                    ]
-                },
+            urbania: {
+                title: "Urbania",
+                images: [
+                    "urbania.png",
+                    "urbania-2.webp",
+                    "urbania-3.webp",
+                    "urbania-4.webp",
+                    "urbania-5.webp"
+                ]
+            },
 
-                dzire: {
-                    title: "Swift Dzire",
-                    images: [
-                        "dzire.jpeg",
-                        "dzire-2.jpeg",
-                        "dzire-3.png"
-                    ]
-                },
+            dzire: {
+                title: "Swift Dzire",
+                images: [
+                    "dzire.webp",
+                    "dzire-2.webp",
+                    "dzire-3.webp"
+                ]
+            },
 
-                ertiga: {
-                    title: "Ertiga",
-                    images: [
-                        "ertiga.png",
-                        "ertiga-2.png",
-                        "ertiga-3.png",
-                        "ertiga-4.png"
-                    ]
-                }
-            };
+            ertiga: {
+                title: "Ertiga",
+                images: [
+                    "ertiga.webp",
+                    "ertiga-2.webp",
+                    "ertiga-3.webp",
+                    "ertiga-4.webp"
+                ]
+            }
+        };
 
-            const modal = document.createElement("div");
-            modal.className = "vehicle-modal";
-            modal.innerHTML = `
-                <div class="modal-backdrop"></div>
-                <div class="modal-box" role="dialog" aria-modal="true">
-                    <button class="modal-close" type="button" aria-label="Close">×</button>
-                    <div class="modal-main-image">
-                        <img id="modalImage" src="" alt="">
-                    </div>
-                    <div class="modal-bottom">
-                        <div>
-                            <span>HIMACHALRIDE FLEET</span>
-                            <h3 id="modalTitle"></h3>
-                        </div>
-                        <div class="modal-controls">
-                            <button id="modalPrev" type="button">←</button>
-                            <span id="modalCount">1 / 1</span>
-                            <button id="modalNext" type="button">→</button>
-                        </div>
-                    </div>
+        const modal = document.createElement("div");
+
+        modal.className = "vehicle-modal";
+
+        modal.innerHTML = `
+            <div class="modal-backdrop"></div>
+
+            <div class="modal-box" role="dialog" aria-modal="true">
+
+                <button
+                    class="modal-close"
+                    type="button"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+                <div class="modal-main-image">
+                    <img
+                        id="modalImage"
+                        src=""
+                        alt=""
+                    >
                 </div>
-            `;
-            document.body.appendChild(modal);
 
-            const modalImage = document.getElementById("modalImage");
-            const modalTitle = document.getElementById("modalTitle");
-            const modalCount = document.getElementById("modalCount");
-            let currentGallery = null;
-            let currentIndex = 0;
+                <div class="modal-bottom">
 
-            function showImage() {
-                const gallery = galleries[currentGallery];
-                currentIndex = (currentIndex + gallery.images.length) % gallery.images.length;
-                modalImage.src = "../assets/images/destinations/" + gallery.images[currentIndex];
-                modalImage.alt = gallery.title;
-                modalTitle.textContent = gallery.title;
-                modalCount.textContent =
-                    (currentIndex + 1) + " / " + gallery.images.length;
-            }
+                    <div>
+                        <span>HIMACHALRIDE FLEET</span>
+                        <h3 id="modalTitle"></h3>
+                    </div>
 
-            function openGallery(name) {
-                currentGallery = name;
-                currentIndex = 0;
-                showImage();
-                modal.classList.add("is-open");
-                document.body.classList.add("modal-open");
-            }
+                    <div class="modal-controls">
 
-            function closeGallery() {
-                modal.classList.remove("is-open");
-                document.body.classList.remove("modal-open");
-            }
+                        <button
+                            id="modalPrev"
+                            type="button"
+                        >
+                            ←
+                        </button>
 
-            document.querySelectorAll(".gallery-open").forEach(function (button) {
-                button.addEventListener("click", function () {
-                    openGallery(button.dataset.gallery);
-                });
+                        <span id="modalCount">
+                            1 / 1
+                        </span>
+
+                        <button
+                            id="modalNext"
+                            type="button"
+                        >
+                            →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+
+        const modalImage =
+            document.getElementById("modalImage");
+
+        const modalTitle =
+            document.getElementById("modalTitle");
+
+        const modalCount =
+            document.getElementById("modalCount");
+
+
+        let currentGallery = null;
+        let currentIndex = 0;
+
+
+        function showImage() {
+
+            const gallery =
+                galleries[currentGallery];
+
+            currentIndex =
+                (currentIndex + gallery.images.length)
+                % gallery.images.length;
+
+            modalImage.src =
+                "../assets/images/destinations/"
+                + gallery.images[currentIndex];
+
+            modalImage.alt =
+                gallery.title;
+
+            modalTitle.textContent =
+                gallery.title;
+
+            modalCount.textContent =
+                (currentIndex + 1)
+                + " / "
+                + gallery.images.length;
+        }
+
+
+        function openGallery(name) {
+
+            currentGallery = name;
+            currentIndex = 0;
+
+            showImage();
+
+            modal.classList.add("is-open");
+
+            document.body.classList.add("modal-open");
+        }
+
+
+        function closeGallery() {
+
+            modal.classList.remove("is-open");
+
+            document.body.classList.remove("modal-open");
+        }
+
+
+        document
+            .querySelectorAll(".gallery-open")
+            .forEach(function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        openGallery(
+                            button.dataset.gallery
+                        );
+
+                    }
+                );
+
             });
 
-            document.getElementById("modalPrev").addEventListener("click", function () {
-                currentIndex--;
-                showImage();
-            });
 
-            document.getElementById("modalNext").addEventListener("click", function () {
-                currentIndex++;
-                showImage();
-            });
+        document
+            .getElementById("modalPrev")
+            .addEventListener(
+                "click",
+                function () {
 
-            modal.querySelector(".modal-close").addEventListener("click", closeGallery);
-            modal.querySelector(".modal-backdrop").addEventListener("click", closeGallery);
-
-            document.addEventListener("keydown", function (event) {
-                if (!modal.classList.contains("is-open")) return;
-
-                if (event.key === "Escape") closeGallery();
-                if (event.key === "ArrowLeft") {
                     currentIndex--;
-                    showImage();
-                }
-                if (event.key === "ArrowRight") {
-                    currentIndex++;
-                    showImage();
-                }
-            });
 
-        });
-    </script>
+                    showImage();
+
+                }
+            );
+
+
+        document
+            .getElementById("modalNext")
+            .addEventListener(
+                "click",
+                function () {
+
+                    currentIndex++;
+
+                    showImage();
+
+                }
+            );
+
+
+        modal
+            .querySelector(".modal-close")
+            .addEventListener(
+                "click",
+                closeGallery
+            );
+
+
+        modal
+            .querySelector(".modal-backdrop")
+            .addEventListener(
+                "click",
+                closeGallery
+            );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    !modal.classList.contains("is-open")
+                ) {
+                    return;
+                }
+
+                if (event.key === "Escape") {
+                    closeGallery();
+                }
+
+                if (event.key === "ArrowLeft") {
+
+                    currentIndex--;
+
+                    showImage();
+
+                }
+
+                if (event.key === "ArrowRight") {
+
+                    currentIndex++;
+
+                    showImage();
+
+                }
+
+            }
+        );
+
+    });
+</script>
 
 </body>
 </html>

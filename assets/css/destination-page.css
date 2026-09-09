@@ -1127,3 +1127,739 @@
         max-height: 115px !important;
     }
 }
+
+/* =========================================================
+   FINAL SIX DESTINATION ROAD-MAP LAYOUT
+   ========================================================= */
+
+.roadmap-page .rm-grid {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+/* Compact road-map cards */
+
+.roadmap-page .rm-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--paper);
+    border: 1px solid rgba(18,63,54,.13);
+    box-shadow: 0 10px 28px rgba(18,63,54,.055);
+}
+
+
+/* Smaller image area */
+
+.roadmap-page .rm-card .rm-photo {
+    height: 230px;
+}
+
+
+/* Smaller card body */
+
+.roadmap-page .rm-card .rm-card-body {
+    padding: 14px 18px 17px;
+}
+
+
+/* Keep the road-map concept but make the map compact */
+
+.roadmap-page .rm-card .rm-map {
+    height: 195px;
+}
+
+
+/* Slightly smaller card title */
+
+.roadmap-page .rm-card .rm-route-head h4 {
+    font-size: 17px;
+}
+
+
+.roadmap-page .rm-card .rm-photo-title h3 {
+    font-size: clamp(35px, 3vw, 46px);
+}
+
+
+/* =========================================================
+   SACRED HIMACHAL
+   TEMPLE IMAGE COLLECTION
+   ========================================================= */
+
+.sacred-himachal {
+    width: 100%;
+
+    padding:
+        88px
+        max(16px, calc((100% - 1220px) / 2))
+        94px;
+
+    background: var(--paper);
+    color: #25322e;
+}
+
+
+.sacred-inner {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+
+/* Section heading */
+
+.sacred-head {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(260px, .65fr);
+
+    align-items: end;
+
+    gap: 55px;
+
+    margin-bottom: 38px;
+}
+
+
+.sacred-label {
+    display: inline-block;
+
+    color: var(--gold);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: .17em;
+}
+
+
+.sacred-head h2 {
+    margin: 14px 0 0;
+
+    color: var(--green);
+
+    font-size: clamp(44px, 5vw, 64px);
+    line-height: .89;
+
+    letter-spacing: -.06em;
+}
+
+
+.sacred-head h2 em {
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+
+.sacred-head > p {
+    max-width: 360px;
+
+    margin: 0 0 3px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   TEMPLE GRID
+   ========================================================= */
+
+.temple-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.temple-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: var(--paper-dark);
+
+    border:
+        1px solid
+        rgba(18,63,54,.12);
+
+    box-shadow:
+        0 10px 28px
+        rgba(18,63,54,.045);
+}
+
+
+.temple-card > a {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Temple image */
+
+.temple-photo {
+    position: relative;
+
+    height: 285px;
+
+    overflow: hidden;
+
+    background: #ccc7b9;
+}
+
+
+.temple-photo > img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+
+    display: block;
+
+    transition:
+        transform .55s ease;
+}
+
+
+.temple-card:hover
+.temple-photo > img {
+    transform: scale(1.035);
+}
+
+
+/* Dark image overlay */
+
+.temple-overlay {
+    position: absolute;
+
+    z-index: 1;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(4,28,23,.88),
+            transparent 67%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(4,28,23,.18),
+            transparent 65%
+        );
+}
+
+
+/* Top labels */
+
+.temple-top {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 15px;
+    left: 15px;
+    right: 15px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+
+.temple-top span {
+    color: #efd69b;
+
+    font-size: 6.5px;
+
+    font-weight: 800;
+
+    letter-spacing: .13em;
+}
+
+
+.temple-top b {
+    padding: 6px 8px;
+
+    background: rgba(255,255,255,.92);
+
+    color: var(--green);
+
+    font-size: 5.5px;
+
+    letter-spacing: .08em;
+}
+
+
+/* Temple title */
+
+.temple-title {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 17px;
+    right: 14px;
+
+    bottom: 18px;
+}
+
+
+.temple-title h3 {
+    margin: 0 0 7px;
+
+    color: #fff;
+
+    font-size:
+        clamp(25px, 2.2vw, 34px);
+
+    line-height: .95;
+
+    letter-spacing: -.045em;
+}
+
+
+.temple-title p {
+    margin: 0;
+
+    color: rgba(255,255,255,.73);
+
+    font-size: 6px;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   TEMPLE FOOTER LINE
+   ========================================================= */
+
+.sacred-foot {
+    margin-top: 22px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid
+        rgba(18,63,54,.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.sacred-foot span {
+    color: #8b928d;
+
+    font-size: 6.5px;
+
+    font-weight: 800;
+
+    letter-spacing: .1em;
+}
+
+
+.sacred-foot a {
+    color: var(--green);
+
+    text-decoration: none;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: .1em;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .roadmap-page .rm-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+
+    .roadmap-page .rm-card .rm-photo {
+        height: 250px;
+    }
+
+
+    .roadmap-page .rm-card .rm-map {
+        height: 200px;
+    }
+
+
+    .sacred-head {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .sacred-head > p {
+        max-width: 620px;
+    }
+
+
+    .temple-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+    /* One road-map card per row */
+
+    .roadmap-page .rm-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .roadmap-page .rm-card .rm-photo {
+        height: 285px;
+    }
+
+
+    .roadmap-page .rm-card .rm-card-body {
+        padding: 15px 18px 18px;
+    }
+
+
+    .roadmap-page .rm-card .rm-map {
+        height: 205px;
+    }
+
+
+    /* Sacred section */
+
+    .sacred-himachal {
+        padding: 68px 17px 72px;
+    }
+
+
+    .sacred-head {
+        margin-bottom: 28px;
+    }
+
+
+    .sacred-head h2 {
+        font-size: 43px;
+    }
+
+
+    .sacred-head > p {
+        font-size: 10px;
+    }
+
+
+    /* Two temple cards on mobile */
+
+    .temple-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    .temple-photo {
+        height: 235px;
+    }
+
+
+    .temple-top {
+        top: 11px;
+        left: 11px;
+        right: 11px;
+    }
+
+
+    .temple-top span {
+        font-size: 5.5px;
+    }
+
+
+    .temple-top b {
+        padding: 5px 6px;
+
+        font-size: 4.8px;
+    }
+
+
+    .temple-title {
+        left: 12px;
+        right: 10px;
+
+        bottom: 13px;
+    }
+
+
+    .temple-title h3 {
+        font-size: 23px;
+    }
+
+
+    .temple-title p {
+        font-size: 5px;
+    }
+
+
+    .sacred-foot {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .roadmap-page .rm-card .rm-photo {
+        height: 260px;
+    }
+
+
+    .temple-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .temple-photo {
+        height: 270px;
+    }
+
+
+    .sacred-head h2 {
+        font-size: 39px;
+    }
+
+}
+
+/* =========================================================
+   SEO DESTINATION SECTION — FULL WIDTH / 3 COLUMN
+   ========================================================= */
+
+.roadmap-page .destination-seo {
+    padding: 86px max(24px, calc((100% - 1280px) / 2)) 92px;
+    background: var(--paper);
+}
+
+.roadmap-page .destination-seo-inner {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* Main heading */
+
+.roadmap-page .destination-seo h2 {
+    max-width: 900px;
+}
+
+
+/* Route grid */
+
+.roadmap-page .destination-route-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 24px;
+}
+
+
+/* Individual route cards */
+
+.roadmap-page .destination-route-item {
+    min-width: 0;
+
+    min-height: 92px;
+
+    padding: 17px 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(18,63,54,.12);
+
+    background: rgba(255,255,255,.72);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.roadmap-page .destination-route-item:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(181,150,91,.45);
+
+    box-shadow:
+        0 10px 24px
+        rgba(18,63,54,.055);
+}
+
+
+/* Route title */
+
+.roadmap-page .destination-route-item strong {
+    margin-bottom: 6px;
+
+    color: var(--green);
+
+    font-size: 13px;
+
+    line-height: 1.2;
+
+    letter-spacing: -.015em;
+}
+
+
+/* Route description */
+
+.roadmap-page .destination-route-item span {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.55;
+}
+
+
+/* Make section headings tighter */
+
+.roadmap-page .destination-seo h3 {
+    margin-top: 42px;
+    margin-bottom: 9px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .roadmap-page .destination-seo {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .roadmap-page .destination-route-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+    .roadmap-page .destination-seo {
+        padding: 62px 17px 70px;
+    }
+
+    .roadmap-page .destination-route-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .roadmap-page .destination-route-item {
+        min-height: 82px;
+
+        padding: 15px 16px;
+    }
+
+    .roadmap-page .destination-route-item strong {
+        font-size: 12px;
+    }
+
+    .roadmap-page .destination-route-item span {
+        font-size: 10px;
+    }
+
+}
+.destination-seo-mini-label {
+    margin-top: 22px;
+
+    color: var(--gold);
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: .16em;
+}

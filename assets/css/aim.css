@@ -1,0 +1,376 @@
+/* =========================================================
+   HIMACHALRIDE — OUR AIM
+   ========================================================= */
+
+.aim-section {
+    width: 100%;
+    padding: 105px 24px 110px;
+    background: #fbfaf5;
+    color: #25322e;
+}
+
+.aim-container {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.aim-header {
+    display: grid;
+    grid-template-columns: 1fr .72fr;
+    gap: 70px;
+    align-items: end;
+    margin-bottom: 55px;
+}
+
+.aim-heading {
+    max-width: 700px;
+}
+
+.aim-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    color: #b5965b;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.aim-heading h2 {
+    margin: 0;
+
+    color: #123f36;
+    font-size: clamp(48px, 5.5vw, 72px);
+    line-height: .88;
+    letter-spacing: -.065em;
+}
+
+.aim-heading h2 em {
+    color: #b5965b;
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.aim-intro {
+    max-width: 380px;
+    margin: 0 0 5px;
+
+    color: #747c77;
+    font-size: 11px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   AIM CARDS
+   ========================================================= */
+
+.aim-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.aim-card {
+    position: relative;
+
+    min-height: 265px;
+    padding: 27px 25px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #eee8da;
+
+    border: 1px solid rgba(18,63,54,.10);
+
+    overflow: hidden;
+
+    transition:
+        transform .28s ease,
+        box-shadow .28s ease,
+        border-color .28s ease;
+}
+
+.aim-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(181,150,91,.42);
+
+    box-shadow:
+        0 16px 34px rgba(18,63,54,.08);
+}
+
+
+/* Large background number */
+
+.aim-card::after {
+    content: attr(data-number);
+
+    position: absolute;
+    right: -5px;
+    bottom: -24px;
+
+    color: rgba(18,63,54,.055);
+
+    font-size: 125px;
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: -.08em;
+
+    pointer-events: none;
+}
+
+
+/* Top */
+
+.aim-card-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aim-number {
+    color: #b5965b;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: .15em;
+}
+
+.aim-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(18,63,54,.13);
+    border-radius: 50%;
+
+    color: #123f36;
+
+    font-size: 19px;
+
+    background: rgba(255,255,255,.34);
+}
+
+
+/* Content */
+
+.aim-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.aim-card-content h3 {
+    margin: 0 0 11px;
+
+    color: #123f36;
+
+    font-size: 21px;
+    line-height: 1;
+
+    letter-spacing: -.035em;
+}
+
+.aim-card-content p {
+    max-width: 320px;
+
+    margin: 0;
+
+    color: #69736e;
+
+    font-size: 10.5px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FINAL STATEMENT
+   ========================================================= */
+
+.aim-bottom {
+    margin-top: 30px;
+
+    padding-top: 24px;
+
+    border-top:
+        1px solid
+        rgba(18,63,54,.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.aim-bottom-label {
+    color: #8b928d;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: .14em;
+}
+
+.aim-bottom-line {
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        repeating-linear-gradient(
+            to right,
+            #b5965b 0 5px,
+            transparent 5px 10px
+        );
+
+    opacity: .65;
+}
+
+.aim-bottom strong {
+    color: #123f36;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: .13em;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .aim-section {
+        padding: 85px 24px 90px;
+    }
+
+    .aim-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .aim-intro {
+        max-width: 600px;
+    }
+
+    .aim-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .aim-card {
+        min-height: 280px;
+        padding: 23px 20px 21px;
+    }
+
+    .aim-card-content h3 {
+        font-size: 18px;
+    }
+
+    .aim-card-content p {
+        font-size: 9.5px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+    .aim-section {
+        padding: 68px 17px 72px;
+    }
+
+    .aim-heading h2 {
+        font-size: 45px;
+    }
+
+    .aim-intro {
+        font-size: 10px;
+    }
+
+    .aim-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .aim-card {
+        min-height: 220px;
+        padding: 22px 20px 21px;
+    }
+
+    .aim-card-content h3 {
+        font-size: 20px;
+    }
+
+    .aim-card-content p {
+        max-width: 440px;
+        font-size: 10px;
+    }
+
+    .aim-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .aim-bottom-line {
+        width: 100%;
+        flex: none;
+    }
+
+    .aim-bottom strong {
+        white-space: normal;
+        font-size: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .aim-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .aim-heading h2 {
+        font-size: 40px;
+    }
+
+    .aim-card {
+        min-height: 215px;
+    }
+
+}
