@@ -1,11 +1,12 @@
 /* =========================================================
-   HIMACHALRIDE — COMMON HEADER / FOOTER
-   ========================================================= */
+   HIMACHALRIDE
+   COMMON HEADER + FOOTER + SOCIAL + WHATSAPP
+========================================================= */
 
 
 /* =========================================================
-   HEADER — FIXED FULL WIDTH GLASS NAVBAR
-   ========================================================= */
+   HEADER
+========================================================= */
 
 .site-header {
     width: 100%;
@@ -22,8 +23,6 @@
     border: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
-    border-radius: 0;
-
     box-shadow: none;
 
     backdrop-filter: blur(12px) saturate(120%);
@@ -37,25 +36,29 @@
 
 
 /* =========================================================
-   HEADER — SCROLLED STATE
-   ========================================================= */
+   HEADER SCROLLED
+========================================================= */
 
 .site-header.scrolled {
     background: rgba(10, 32, 27, 0.92);
 
-    border-bottom-color: rgba(255, 255, 255, 0.14);
+    border-bottom-color:
+        rgba(255, 255, 255, 0.14);
 
     box-shadow:
         0 8px 30px rgba(0, 0, 0, 0.18);
 
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter:
+        blur(18px) saturate(140%);
+
+    -webkit-backdrop-filter:
+        blur(18px) saturate(140%);
 }
 
 
 /* =========================================================
    HEADER INNER
-   ========================================================= */
+========================================================= */
 
 .header-inner {
     width: 100%;
@@ -73,13 +76,13 @@
     gap: 28px;
 
     position: relative;
+
     z-index: 2;
 
-    transition: min-height 0.3s ease;
+    transition:
+        min-height 0.3s ease;
 }
 
-
-/* Smaller navbar after scrolling */
 
 .site-header.scrolled .header-inner {
     min-height: 70px;
@@ -88,10 +91,11 @@
 
 /* =========================================================
    BRAND
-   ========================================================= */
+========================================================= */
 
 .brand {
     display: inline-flex;
+
     align-items: center;
 
     gap: 10px;
@@ -103,14 +107,8 @@
 
 
 /* =========================================================
-   NEW HIMACHALRIDE LOGO
-   ========================================================= */
-
-/*
-   The actual logo image is a square PNG.
-   Desktop sizing is kept controlled so the original
-   image dimensions can never affect navbar height.
-*/
+   LOGO
+========================================================= */
 
 .brand-logo {
     display: block;
@@ -122,38 +120,49 @@
     max-height: 64px;
 
     object-fit: contain;
+
     object-position: left center;
+
+    flex-shrink: 0;
 }
 
 
 /* =========================================================
-   OLD HR LOGO MARK
-   ========================================================= */
+   BRAND MARK
+========================================================= */
 
 .brand-mark {
     width: 40px;
     height: 40px;
 
     display: grid;
+
     place-items: center;
 
-    border: 1px solid rgba(255, 255, 255, 0.55);
+    border: 1px solid
+        rgba(255, 255, 255, 0.55);
 
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.07);
+    background:
+        rgba(255, 255, 255, 0.07);
 
     color: #ffffff;
 
-    font-family: "Manrope", sans-serif;
+    font-family:
+        "Manrope",
+        sans-serif;
 
     font-weight: 800;
+
     font-size: 13px;
 
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.12);
 
     backdrop-filter: blur(8px);
+
     -webkit-backdrop-filter: blur(8px);
 
     transition:
@@ -164,22 +173,27 @@
 
 
 .brand:hover .brand-mark {
-    background: rgba(255, 255, 255, 0.13);
+    background:
+        rgba(255, 255, 255, 0.13);
 
-    border-color: rgba(255, 255, 255, 0.75);
+    border-color:
+        rgba(255, 255, 255, 0.75);
 
-    transform: rotate(-4deg);
+    transform:
+        rotate(-4deg);
 }
 
 
 /* =========================================================
    BRAND NAME
-   ========================================================= */
+========================================================= */
 
 .brand-name {
     color: #ffffff;
 
-    font-family: "Manrope", sans-serif;
+    font-family:
+        "Manrope",
+        sans-serif;
 
     font-weight: 800;
 
@@ -197,13 +211,14 @@
 
 
 /* =========================================================
-   MAIN NAVIGATION
-   ========================================================= */
+   NAVIGATION
+========================================================= */
 
 .main-nav {
     margin-left: auto;
 
     display: flex;
+
     align-items: center;
 
     gap: 24px;
@@ -213,11 +228,15 @@
 .main-nav a {
     position: relative;
 
-    color: rgba(255, 255, 255, 0.90);
+    color:
+        rgba(255, 255, 255, 0.90);
 
-    font-family: "DM Sans", sans-serif;
+    font-family:
+        "DM Sans",
+        sans-serif;
 
     font-size: 14px;
+
     font-weight: 600;
 
     text-decoration: none;
@@ -227,10 +246,6 @@
         opacity 0.25s ease;
 }
 
-
-/* =========================================================
-   GOLD UNDERLINE
-   ========================================================= */
 
 .main-nav a::after {
     content: "";
@@ -246,49 +261,42 @@
 
     background: #e5bd6b;
 
-    transform: scaleX(0);
+    transform:
+        scaleX(0);
 
     transform-origin: center;
 
-    transition: transform 0.25s ease;
+    transition:
+        transform 0.25s ease;
 }
 
 
-.main-nav a:hover {
-    color: #ffffff;
-}
-
-
-.main-nav a:hover::after {
-    transform: scaleX(1);
-}
-
-
-/* =========================================================
-   ACTIVE LINK
-   ========================================================= */
-
+.main-nav a:hover,
 .main-nav a.active {
     color: #ffffff;
 }
 
 
+.main-nav a:hover::after,
 .main-nav a.active::after {
-    transform: scaleX(1);
+    transform:
+        scaleX(1);
 }
 
 
 /* =========================================================
-   BOOK NOW BUTTON
-   ========================================================= */
+   BOOK NOW
+========================================================= */
 
 .header-book-btn {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
-    background: rgba(255, 255, 255, 0.96);
+    background:
+        rgba(255, 255, 255, 0.96);
 
     color: #123f36;
 
@@ -296,17 +304,22 @@
 
     border-radius: 999px;
 
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid
+        rgba(255, 255, 255, 0.25);
 
-    font-family: "DM Sans", sans-serif;
+    font-family:
+        "DM Sans",
+        sans-serif;
 
     font-size: 13px;
+
     font-weight: 700;
 
     text-decoration: none;
 
     box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.12);
+        0 6px 18px
+        rgba(0, 0, 0, 0.12);
 
     transition:
         background 0.3s ease,
@@ -321,16 +334,18 @@
 
     color: #123f36;
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
     box-shadow:
-        0 8px 22px rgba(0, 0, 0, 0.16);
+        0 8px 22px
+        rgba(0, 0, 0, 0.16);
 }
 
 
 /* =========================================================
-   MOBILE MENU BUTTON
-   ========================================================= */
+   MENU BUTTON
+========================================================= */
 
 .menu-toggle {
     display: none;
@@ -363,73 +378,111 @@
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 .site-footer {
-    background: var(--primary-dark);
+    position: relative;
 
-    color: rgba(255, 255, 255, 0.78);
+    overflow: hidden;
 
-    padding: 42px 0 0;
+    background-color: #123f36;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(18, 63, 54, 0.72),
+            rgba(7, 39, 32, 0.95)
+        ),
+        url("../images/destinations/mountain-silhouette.webp");
+
+    background-repeat: no-repeat;
+
+    background-position:
+        center center,
+        center bottom;
+
+    background-size:
+        cover,
+        cover;
+
+    color:
+        rgba(255, 255, 255, 0.76);
+
+    padding: 30px 0 0;
+
+    min-height: 0;
 }
 
 
-.footer-inner {
-    width: min(1240px, calc(100% - 40px));
+.site-footer > * {
+    position: relative;
 
-    margin: auto;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   FOOTER INNER
+========================================================= */
+
+.footer-inner {
+    width:
+        min(1240px, calc(100% - 48px));
+
+    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
-        1.6fr
-        1fr
-        1fr
-        1.2fr;
+        minmax(210px, 1.35fr)
+        minmax(120px, 0.75fr)
+        minmax(120px, 0.75fr)
+        minmax(150px, 1fr)
+        minmax(300px, 1.65fr);
 
-    gap: 35px;
+    column-gap: 38px;
 
-    padding-bottom: 18px;
-
-    /*
-       Keeps all footer columns aligned at the top.
-    */
     align-items: start;
-}
 
-
-.site-footer .brand-name {
-    color: var(--white);
-}
-
-
-.site-footer .brand-name span {
-    color: var(--accent);
+    padding-bottom: 28px;
 }
 
 
 /* =========================================================
    FOOTER BRAND
-   ========================================================= */
-
-/*
-   Negative margin actually reduces the grid row height.
-   This moves the logo + description upward AND removes
-   the unnecessary space underneath the brand column.
-*/
+========================================================= */
 
 .footer-brand {
-    margin-top: -24px;
-    align-self: start;
+    min-width: 0;
+}
+
+
+.footer-brand .brand-logo {
+    display: block;
+
+    width: 165px;
+
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    object-position: left center;
+
+    margin: 0 0 10px;
 }
 
 
 .footer-brand p {
-    max-width: 320px;
+    max-width: 280px;
 
-    margin-top: 6px;
+    margin: 0;
 
-    font-size: 14px;
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 13px;
 
     line-height: 1.5;
 }
@@ -437,83 +490,288 @@
 
 /* =========================================================
    FOOTER COLUMNS
-   ========================================================= */
+========================================================= */
 
 .footer-column {
+    min-width: 0;
+
     display: flex;
 
     flex-direction: column;
 
+    align-items: flex-start;
+
     gap: 6px;
 
-    font-size: 14px;
+    color:
+        rgba(255, 255, 255, 0.76);
 
-    align-self: start;
+    font-size: 13px;
+
+    line-height: 1.4;
 }
 
 
 .footer-column h3 {
-    color: var(--white);
+    margin: 0 0 4px;
+
+    color: #ffffff;
 
     font-size: 14px;
 
-    margin-bottom: 5px;
+    line-height: 1.2;
+
+    font-weight: 700;
 }
 
 
 .footer-column a {
+    color:
+        rgba(255, 255, 255, 0.76);
+
+    text-decoration: none;
+
     transition:
-        color 0.25s ease;
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 
 .footer-column a:hover {
-    color: var(--accent-light);
+    color: #e5bd6b;
+
+    transform:
+        translateX(2px);
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.footer-social p {
+    max-width: 220px;
+
+    margin: 0 0 7px;
+
+    color:
+        rgba(255, 255, 255, 0.70);
+
+    font-size: 12.5px;
+
+    line-height: 1.45;
+}
+
+
+.footer-social-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.footer-social-links a {
+    width: 34px;
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    color:
+        rgba(255, 255, 255, 0.90) !important;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.28);
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transform: none !important;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.footer-social-links a svg {
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    fill: currentColor;
+}
+
+
+.footer-social-links a:hover {
+    color: #123f36 !important;
+
+    background: #e5bd6b;
+
+    border-color: #e5bd6b;
+
+    transform:
+        translateY(-2px) !important;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.footer-contact {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    column-gap: 22px;
+
+    row-gap: 4px;
+
+    align-items: start;
+
+    min-width: 0;
+}
+
+
+/*
+   Contact heading + phone numbers + WhatsApp
+   span across both location columns.
+*/
+
+.footer-contact > h3,
+.footer-contact > a {
+    grid-column: 1 / -1;
+}
+
+
+.footer-contact > h3 {
+    margin-bottom: 1px;
+}
+
+
+.footer-contact > a {
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   LOCATIONS
+========================================================= */
+
+.footer-contact .footer-location {
+    min-width: 0;
+
+    margin: 8px 0 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.footer-location strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.footer-location span {
+    display: block;
+
+    color:
+        rgba(255, 255, 255, 0.70);
+
+    font-size: 11.7px;
+
+    line-height: 1.38;
 }
 
 
 /* =========================================================
    FOOTER BOTTOM
-   ========================================================= */
+========================================================= */
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-
-    width: min(1240px, calc(100% - 40px));
-
-    margin: auto;
+    width:
+        min(1240px, calc(100% - 48px));
 
     min-height: 42px;
 
-    display: flex;
+    margin: 0 auto;
 
-    justify-content: space-between;
+    padding: 9px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
 
     align-items: center;
 
-    gap: 18px;
+    gap: 30px;
 
-    padding: 8px 0;
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.13);
 
-    font-size: 12px;
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    font-size: 11.5px;
+
+    line-height: 1.35;
 }
 
 
-/* =========================================================
-   DEVELOPER CREDIT
-   ========================================================= */
+.footer-bottom > span:first-child {
+    text-align: left;
+}
+
+
+.footer-bottom > span:last-child {
+    text-align: right;
+}
+
 
 .footer-developer {
     text-align: center;
 
-    color: rgba(255, 255, 255, 0.55);
-
     white-space: nowrap;
+
+    color:
+        rgba(255, 255, 255, 0.58);
 }
 
 
 .footer-developer strong {
-    color: rgba(255, 255, 255, 0.90);
+    color:
+        rgba(255, 255, 255, 0.90);
 
     font-weight: 700;
 
@@ -522,13 +780,14 @@
 
 
 /* =========================================================
-   LARGE TABLET / SMALL DESKTOP
-   ========================================================= */
+   LARGE TABLET
+========================================================= */
 
 @media (max-width: 1100px) {
 
     .header-inner {
-        padding: 0 40px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
 
@@ -541,35 +800,38 @@
         font-size: 13px;
     }
 
+
+    .footer-inner {
+        grid-template-columns:
+            minmax(190px, 1.2fr)
+            minmax(110px, 0.8fr)
+            minmax(110px, 0.8fr)
+            minmax(140px, 0.9fr)
+            minmax(260px, 1.4fr);
+
+        column-gap: 24px;
+    }
+
 }
 
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
-    /* -----------------------------------------------------
-       HEADER
-       ----------------------------------------------------- */
-
-    .site-header {
-        height: auto;
-        min-height: 0;
-    }
-
+    /* HEADER */
 
     .header-inner {
         width: 100%;
 
         min-height: 76px;
+
         height: 76px;
 
-        padding: 8px 24px;
-
-        display: flex;
-        align-items: center;
+        padding:
+            8px 24px;
 
         box-sizing: border-box;
     }
@@ -577,19 +839,12 @@
 
     .site-header.scrolled .header-inner {
         min-height: 70px;
+
         height: 70px;
     }
 
 
-    /* -----------------------------------------------------
-       BRAND / LOGO
-       ----------------------------------------------------- */
-
     .brand {
-        display: inline-flex;
-
-        align-items: center;
-
         height: 60px;
 
         min-width: 0;
@@ -598,57 +853,54 @@
     }
 
 
-    /*
-       IMPORTANT:
-       The original logo is a square 1080x1080 PNG.
-       Explicit dimensions prevent it from expanding
-       the mobile navbar.
-    */
-
     .brand-logo {
-        display: block;
-
         width: 150px;
+
         height: 60px;
 
         max-width: 150px;
+
         max-height: 60px;
 
         object-fit: contain;
-        object-position: left center;
 
         flex-shrink: 0;
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE NAVIGATION
-       ----------------------------------------------------- */
+    /* MOBILE NAV */
 
     .main-nav {
         display: none;
 
         position: absolute;
 
-        top: calc(100% + 6px);
+        top:
+            calc(100% + 6px);
 
         left: 12px;
+
         right: 12px;
 
         width: auto;
 
         padding: 20px;
 
-        background: rgba(12, 42, 35, 0.97);
+        background:
+            rgba(12, 42, 35, 0.97);
 
-        border: 1px solid rgba(255, 255, 255, 0.14);
+        border:
+            1px solid
+            rgba(255, 255, 255, 0.14);
 
         border-radius: 14px;
 
         box-shadow:
-            0 15px 40px rgba(0, 0, 0, 0.22);
+            0 15px 40px
+            rgba(0, 0, 0, 0.22);
 
         backdrop-filter: blur(18px);
+
         -webkit-backdrop-filter: blur(18px);
 
         flex-direction: column;
@@ -665,7 +917,8 @@
 
 
     .main-nav a {
-        color: rgba(255, 255, 255, 0.90);
+        color:
+            rgba(255, 255, 255, 0.90);
 
         font-size: 15px;
     }
@@ -676,17 +929,15 @@
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE MENU BUTTON
-       ----------------------------------------------------- */
-
     .menu-toggle {
         width: 44px;
+
         height: 44px;
 
         display: flex;
 
         align-items: center;
+
         justify-content: center;
 
         margin-left: auto;
@@ -699,31 +950,66 @@
 
     .menu-toggle span {
         width: 25px;
+
         height: 2px;
 
         margin: 4px 0;
     }
 
 
-    /* -----------------------------------------------------
-       HIDE BOOK BUTTON
-       ----------------------------------------------------- */
-
     .header-book-btn {
         display: none;
     }
 
 
-    /* -----------------------------------------------------
-       FOOTER
-       ----------------------------------------------------- */
+    /* FOOTER */
 
     .footer-inner {
-        grid-template-columns: 1fr 1fr;
+        width:
+            min(820px, calc(100% - 40px));
 
-        gap: 30px;
+        grid-template-columns:
+            1.25fr
+            1fr
+            1fr;
 
-        padding-bottom: 18px;
+        column-gap: 28px;
+
+        row-gap: 24px;
+
+        padding-bottom: 24px;
+    }
+
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+
+    .footer-brand .brand-logo {
+        width: 160px;
+    }
+
+
+    .footer-brand p {
+        max-width: 360px;
+    }
+
+
+    .footer-contact {
+        grid-column: span 1;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        column-gap: 18px;
+    }
+
+
+    .footer-bottom {
+        width:
+            min(820px, calc(100% - 40px));
     }
 
 }
@@ -731,16 +1017,13 @@
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
-    /* -----------------------------------------------------
-       HEADER
-       ----------------------------------------------------- */
-
     .site-header {
         height: auto;
+
         min-height: 0;
     }
 
@@ -749,9 +1032,11 @@
         width: 100%;
 
         min-height: 72px;
+
         height: 72px;
 
-        padding: 6px 18px;
+        padding:
+            6px 18px;
 
         box-sizing: border-box;
     }
@@ -759,13 +1044,10 @@
 
     .site-header.scrolled .header-inner {
         min-height: 68px;
+
         height: 68px;
     }
 
-
-    /* -----------------------------------------------------
-       BRAND
-       ----------------------------------------------------- */
 
     .brand {
         height: 58px;
@@ -776,31 +1058,20 @@
     }
 
 
-    /*
-       Keep the new logo completely inside the header.
-       This is the main fix for the oversized mobile
-       navigation seen in the screenshot.
-    */
-
     .brand-logo {
-        display: block;
-
         width: 145px;
+
         height: 58px;
 
         max-width: 145px;
+
         max-height: 58px;
 
         object-fit: contain;
-        object-position: left center;
 
         flex-shrink: 0;
     }
 
-
-    /* -----------------------------------------------------
-       OLD BRAND MARK
-       ----------------------------------------------------- */
 
     .brand-mark {
         width: 36px;
@@ -816,12 +1087,9 @@
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE MENU BUTTON
-       ----------------------------------------------------- */
-
     .menu-toggle {
         width: 42px;
+
         height: 42px;
 
         margin-left: auto;
@@ -829,28 +1097,27 @@
         display: flex;
 
         align-items: center;
+
         justify-content: center;
     }
 
 
     .menu-toggle span {
         width: 24px;
+
         height: 2px;
 
         margin: 4px 0;
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE DROPDOWN
-       ----------------------------------------------------- */
-
     .main-nav {
         left: 10px;
 
         right: 10px;
 
-        top: calc(100% + 6px);
+        top:
+            calc(100% + 6px);
 
         padding: 18px;
 
@@ -860,53 +1127,214 @@
     }
 
 
-    /* -----------------------------------------------------
-       FOOTER
-       ----------------------------------------------------- */
+    /* FOOTER */
 
     .site-footer {
-        padding-top: 28px;
+        padding-top: 26px;
     }
 
 
     .footer-inner {
-        grid-template-columns: 1fr;
+        width:
+            calc(100% - 36px);
 
-        gap: 22px;
+        grid-template-columns:
+            1fr 1fr;
 
-        padding-bottom: 18px;
+        column-gap: 22px;
+
+        row-gap: 22px;
+
+        padding-bottom: 22px;
     }
 
 
-    /*
-       Less upward movement on mobile so the logo
-       doesn't get too close to the footer edge.
-    */
-
     .footer-brand {
-        margin-top: -12px;
+        grid-column: 1 / -1;
+    }
+
+
+    .footer-brand .brand-logo {
+        width: 155px;
+
+        height: auto;
+
+        max-width: 155px;
+    }
+
+
+    .footer-brand p {
+        max-width: 310px;
+
+        font-size: 12.5px;
+
+        line-height: 1.45;
+    }
+
+
+    .footer-column {
+        gap: 5px;
+
+        font-size: 13px;
+    }
+
+
+    .footer-column h3 {
+        font-size: 13.5px;
+
+        margin-bottom: 3px;
+    }
+
+
+    .footer-social {
+        grid-column: 1 / -1;
+    }
+
+
+    .footer-social p {
+        max-width: 300px;
+    }
+
+
+    .footer-contact {
+        grid-column: 1 / -1;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        column-gap: 18px;
+    }
+
+
+    .footer-contact > h3,
+    .footer-contact > a {
+        grid-column: 1 / -1;
+    }
+
+
+    .footer-location {
+        min-width: 0;
+    }
+
+
+    .footer-location span {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+
+    .footer-social-links a {
+        width: 35px;
+
+        height: 35px;
     }
 
 
     .footer-bottom {
-        min-height: 48px;
+        width:
+            calc(100% - 36px);
 
-        flex-direction: column;
-
-        justify-content: center;
-
-        text-align: center;
+        min-height: 0;
 
         padding: 10px 0;
 
-        gap: 7px;
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        text-align: center;
+
+        font-size: 11px;
+    }
+
+
+    .footer-bottom > span:first-child,
+    .footer-bottom > span:last-child,
+    .footer-developer {
+        text-align: center;
     }
 
 
     .footer-developer {
-        order: 2;
-
         white-space: normal;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .header-inner {
+        padding-left: 14px;
+
+        padding-right: 14px;
+    }
+
+
+    .brand-logo {
+        width: 138px;
+
+        height: 55px;
+
+        max-width: 138px;
+
+        max-height: 55px;
+    }
+
+
+    .menu-toggle {
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    .footer-inner {
+        width:
+            calc(100% - 30px);
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding-bottom: 20px;
+    }
+
+
+    .footer-brand,
+    .footer-social,
+    .footer-contact {
+        grid-column: auto;
+    }
+
+
+    .footer-contact {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-contact > h3,
+    .footer-contact > a {
+        grid-column: 1;
+    }
+
+
+    .footer-contact .footer-location {
+        grid-column: 1;
+
+        margin-top: 6px;
+    }
+
+
+    .footer-bottom {
+        width:
+            calc(100% - 30px);
     }
 
 }
@@ -914,154 +1342,32 @@
 
 /* =========================================================
    VERY SMALL PHONES
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 380px) {
 
-    .header-inner {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-
-
     .brand-logo {
-        width: 135px;
-        height: 54px;
+        width: 130px;
 
-        max-width: 135px;
-        max-height: 54px;
-    }
+        height: 52px;
 
+        max-width: 130px;
 
-    .menu-toggle {
-        width: 40px;
-        height: 40px;
-    }
-
-}
-
-
-/* =========================================================
-   FOOTER — HIMALAYAN MOUNTAIN BACKGROUND
-   ========================================================= */
-
-.site-footer {
-    position: relative;
-
-    overflow: hidden;
-
-    background-color: #123f36;
-
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(18, 63, 54, 0.78),
-            rgba(10, 43, 36, 0.88)
-        ),
-        url("../images/destinations/mountain-silhouette.png");
-
-    background-repeat: no-repeat;
-
-    background-position:
-        center center,
-        center bottom;
-
-    background-size:
-        cover,
-        cover;
-}
-
-
-/* Footer content stays above background */
-
-.site-footer > * {
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   FINAL FOOTER OVERRIDES
-   ========================================================= */
-
-/*
-   Desktop:
-   Move brand block upward without leaving its original
-   layout space behind.
-*/
-
-@media (min-width: 601px) {
-
-    .footer-brand {
-        margin-top: -24px;
-    }
-
-
-    .footer-brand p {
-        margin-top: 6px;
-        line-height: 1.5;
+        max-height: 52px;
     }
 
 
     .footer-inner {
-        padding-bottom: 10px;
-    }
+        width:
+            calc(100% - 28px);
 
-}
-
-
-/*
-   Developer credit stays centered between the two
-   footer-side information blocks.
-*/
-
-.footer-bottom {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-/* =========================================================
-   MOBILE FINAL OVERRIDES
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    .footer-brand {
-        margin-top: -12px;
-    }
-
-
-    .footer-inner {
-        gap: 22px;
-
-        padding-bottom: 12px;
+        gap: 18px;
     }
 
 
     .footer-bottom {
-        min-height: 48px;
-
-        padding: 10px 0;
-
-        gap: 7px;
-
-        flex-direction: column;
-
-        justify-content: center;
-
-        text-align: center;
-    }
-
-
-    .footer-developer {
-        order: 2;
-
-        white-space: normal;
+        width:
+            calc(100% - 28px);
     }
 
 }

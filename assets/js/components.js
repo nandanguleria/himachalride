@@ -1,13 +1,11 @@
 /* =========================================================
-   Common Header + Footer + WhatsApp
-   These components are loaded on every page.
+   HIMACHALRIDE — COMMON HEADER + FOOTER + WHATSAPP
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const header = document.getElementById("header");
     const footer = document.getElementById("footer");
-
 
     /*
      * Pages inside /pages/ need "../"
@@ -19,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        HEADER
-       ===================================================== */
+    ===================================================== */
 
     if (header) {
 
@@ -52,6 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             Vehicles
                         </a>
 
+                        <a href="${base}pages/services.html">
+                            Services
+                        </a>
+
                         <a href="${base}pages/tours.html">
                             Tours
                         </a>
@@ -67,23 +69,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     </nav>
 
 
-                    <a href="${base}pages/contact.html#booking"
-                       class="header-book-btn">
-
+                    <a
+                        href="${base}pages/contact.html#booking"
+                        class="header-book-btn"
+                    >
                         Book Now
-
                     </a>
 
 
                     <button
                         class="menu-toggle"
                         aria-label="Open menu"
-                        aria-expanded="false">
-
+                        aria-expanded="false"
+                        type="button"
+                    >
                         <span></span>
                         <span></span>
                         <span></span>
-
                     </button>
 
                 </div>
@@ -96,13 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        FOOTER
-       ===================================================== */
+    ===================================================== */
 
     if (footer) {
 
         footer.innerHTML = `
 
             <footer class="site-footer">
+
+                <!-- =========================================
+                     FOOTER MAIN CONTENT
+                ========================================== -->
 
                 <div class="footer-inner">
 
@@ -111,8 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <div class="footer-brand">
 
-                        <a href="${base}index.html"
-                           class="brand">
+                        <a
+                            href="${base}index.html"
+                            class="brand"
+                            aria-label="HimachalRide Home"
+                        >
 
                             <img
                                 class="brand-logo"
@@ -168,9 +177,65 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
 
-                    <!-- CONTACT -->
+                    <!-- SOCIAL MEDIA -->
 
-                    <div class="footer-column">
+                    <div class="footer-column footer-social">
+
+                        <h3>Follow Us</h3>
+
+                        <p>
+                            Follow HimachalRide for travel
+                            updates, destinations and new
+                            journeys.
+                        </p>
+
+                        <div class="footer-social-links">
+
+                            <!-- Instagram -->
+
+                            <a
+                                href="https://www.instagram.com/kritya_rana_tour_and_traval?stkn=NjdwZDJwd2JzdTgx"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Follow HimachalRide on Instagram"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5Zm8.75 2.25a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
+                                </svg>
+
+                            </a>
+
+
+                            <!-- Facebook -->
+
+                            <a
+                                href="https://www.facebook.com/share/1DHaCegEpJ/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Follow HimachalRide on Facebook"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M13.5 22v-8h2.75l.5-3h-3.25V9.05c0-.87.29-1.55 1.58-1.55H17V4.82c-.34-.05-1.5-.15-2.62-.15-2.59 0-4.38 1.58-4.38 4.48V11H7v3h3v8h3.5Z"/>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTACT + LOCATIONS -->
+
+                    <div class="footer-column footer-contact">
 
                         <h3>Contact</h3>
 
@@ -185,15 +250,40 @@ document.addEventListener("DOMContentLoaded", () => {
                         <a
                             href="https://wa.me/919805664108"
                             target="_blank"
-                            rel="noopener"
+                            rel="noopener noreferrer"
                         >
                             WhatsApp
                         </a>
 
-                        <span>
-                            Fatehpur Bus Stand,<br>
-                            Near NH27 Talwara–Chamba Highway
-                        </span>
+
+                        <!-- FATEHPUR -->
+
+                        <div class="footer-location">
+
+                            <strong>Fatehpur</strong>
+
+                            <span>
+                                Fatehpur Bus Stand,<br>
+                                Near NH27 Talwara–Chamba Highway
+                            </span>
+
+                        </div>
+
+
+                        <!-- MOHALI -->
+
+                        <div class="footer-location">
+
+                            <strong>Mohali</strong>
+
+                            <span>
+                                Phase 4, Sector 59,<br>
+                                Sahibzada Ajit Singh Nagar,<br>
+                                Punjab 160059<br>
+                                Near Shree Sanatan Dharam Mandir
+                            </span>
+
+                        </div>
 
                     </div>
 
@@ -201,7 +291,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
 
-                <!-- FOOTER BOTTOM -->
+                <!-- =========================================
+                     FOOTER BOTTOM
+                ========================================== -->
 
                 <div class="footer-bottom">
 
@@ -212,10 +304,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         All rights reserved.
                     </span>
 
+
                     <span class="footer-developer">
+
                         Website Designed &amp; Developed by
+
                         <strong>NN Solutions</strong>
+
                     </span>
+
 
                     <span>
                         Est. 2016 · Available 24/7
@@ -232,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        CURRENT YEAR
-       ===================================================== */
+    ===================================================== */
 
     const year = document.getElementById("current-year");
 
@@ -242,11 +339,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       MOBILE MENU
-       ===================================================== */
+       ACTIVE NAVIGATION
+    ===================================================== */
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".main-nav");
+    const currentPath =
+        window.location.pathname.replace(/\/+$/, "");
+
+    document.querySelectorAll(".main-nav a").forEach(link => {
+
+        const linkPath =
+            new URL(link.href, window.location.origin)
+                .pathname
+                .replace(/\/+$/, "");
+
+        if (
+            linkPath === currentPath ||
+            (
+                currentPath === "" &&
+                linkPath.endsWith("/index.html")
+            )
+        ) {
+            link.classList.add("active");
+        }
+
+    });
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    const menuToggle =
+        document.querySelector(".menu-toggle");
+
+    const nav =
+        document.querySelector(".main-nav");
+
 
     if (menuToggle && nav) {
 
@@ -258,6 +386,13 @@ document.addEventListener("DOMContentLoaded", () => {
             menuToggle.setAttribute(
                 "aria-expanded",
                 String(isOpen)
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close menu"
+                    : "Open menu"
             );
 
         });
@@ -276,6 +411,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     "false"
                 );
 
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
+
             });
 
         });
@@ -284,13 +424,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       FLOATING WHATSAPP BUTTON
-       ===================================================== */
+       HEADER SCROLL EFFECT
+    ===================================================== */
 
-    const whatsappNumber = "919805664108";
+    const siteHeader =
+        document.querySelector(".site-header");
+
+
+    const updateHeader =
+        () => {
+
+            if (!siteHeader) return;
+
+            if (window.scrollY > 30) {
+
+                siteHeader.classList.add("scrolled");
+
+            } else {
+
+                siteHeader.classList.remove("scrolled");
+
+            }
+
+        };
+
+
+    updateHeader();
+
+    window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+    );
+
+
+    /* =====================================================
+       FLOATING WHATSAPP BUTTON
+    ===================================================== */
+
+    const whatsappNumber =
+        "919805664108";
+
 
     const whatsappMessage =
         "Hello HimachalRide, I would like to enquire about a taxi or tour. Please share the details.";
+
 
     const whatsappURL =
         `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -305,17 +483,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const whatsappButton =
             document.createElement("a");
 
+
         whatsappButton.className =
             "floating-whatsapp";
+
 
         whatsappButton.href =
             whatsappURL;
 
+
         whatsappButton.target =
             "_blank";
 
+
         whatsappButton.rel =
-            "noopener";
+            "noopener noreferrer";
+
 
         whatsappButton.setAttribute(
             "aria-label",
@@ -329,7 +512,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <svg
                     viewBox="0 0 24 24"
-                    aria-hidden="true">
+                    aria-hidden="true"
+                >
 
                     <path
                         d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0

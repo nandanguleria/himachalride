@@ -1,0 +1,1155 @@
+/* =========================================================
+   HIMACHALRIDE
+   SERVICES PAGE
+========================================================= */
+
+
+/* =========================================================
+   FOUNDATION
+========================================================= */
+
+.services-page {
+    background: #f7f5ef;
+    color: #17211e;
+}
+
+.services-page main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.services-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.services-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 720px;
+
+    overflow: hidden;
+
+    background: #123f36;
+}
+
+
+/* Background image */
+
+.services-hero-background {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        url("../images/destinations/himachal-hero.jpg.webp");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.01);
+}
+
+
+/* Overlay
+
+   Stronger on the LEFT because the text
+   now belongs on the left side.
+*/
+
+.services-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 37, 31, 0.90) 0%,
+            rgba(8, 37, 31, 0.76) 24%,
+            rgba(8, 37, 31, 0.43) 47%,
+            rgba(8, 37, 31, 0.12) 70%,
+            rgba(8, 37, 31, 0.32) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* Hero container */
+
+.services-hero-inner {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1240px, calc(100% - 40px));
+
+    min-height: 720px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: flex-start;
+}
+
+
+/* Content */
+
+.services-hero-content {
+    width: min(610px, 53%);
+
+    padding-top: 55px;
+
+    color: #fff;
+}
+
+
+/* Eyebrow */
+
+.services-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 23px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.84);
+}
+
+.services-hero-eyebrow::before {
+    content: "";
+
+    width: 38px;
+    height: 1px;
+
+    background: #d9a441;
+}
+
+
+/* Main heading */
+
+.services-hero-content h1 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(55px, 6vw, 88px);
+
+    line-height: 0.94;
+
+    font-weight: 800;
+
+    letter-spacing: -0.06em;
+
+    color: #fff;
+}
+
+.services-hero-content h1 em {
+    display: block;
+
+    margin-top: 7px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 0.87em;
+
+    line-height: 0.98;
+
+    font-weight: 400;
+    font-style: italic;
+
+    letter-spacing: -0.025em;
+
+    color: #d9a441;
+}
+
+
+/* Description */
+
+.services-hero-text {
+    max-width: 525px;
+
+    margin: 30px 0 29px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* Buttons */
+
+.services-hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 27px;
+}
+
+
+/* Primary */
+
+.services-primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 49px;
+
+    padding: 0 22px;
+
+    background: #d9a441;
+
+    color: #173d34;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.services-primary-btn:hover {
+    transform: translateY(-2px);
+
+    background: #e5b34e;
+}
+
+.services-primary-btn span,
+.services-primary-btn strong {
+    font-size: 15px;
+}
+
+
+/* Secondary */
+
+.services-secondary-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.services-secondary-btn:hover {
+    transform: translateX(4px);
+}
+
+.services-secondary-btn span {
+    font-size: 16px;
+}
+
+
+/* Trust line */
+
+.services-hero-trust {
+    margin-top: 24px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    color: rgba(255, 255, 255, 0.76);
+}
+
+
+/* =========================================================
+   AIM SECTION
+========================================================= */
+
+.services-page .aim-section {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SERVICES INTRO
+========================================================= */
+
+.services-intro {
+    padding: 95px 0 55px;
+
+    background: #f7f5ef;
+}
+
+.services-intro > .services-container {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 80px;
+
+    align-items: end;
+}
+
+
+/* Label */
+
+.services-section-label {
+    display: inline-block;
+
+    margin-bottom: 17px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    color: #a47b2d;
+}
+
+
+/* Heading */
+
+.services-intro-heading h2 {
+    max-width: 700px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(40px, 4.5vw, 62px);
+
+    line-height: 1.01;
+
+    font-weight: 800;
+
+    letter-spacing: -0.05em;
+
+    color: #173d34;
+}
+
+.services-intro-heading h2 em {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* Description */
+
+.services-intro-text {
+    padding-bottom: 5px;
+}
+
+.services-intro-text p {
+    max-width: 430px;
+
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    color: #68736e;
+}
+
+
+/* =========================================================
+   SERVICE LIST
+========================================================= */
+
+.services-list-section {
+    padding: 20px 0 105px;
+
+    background: #f7f5ef;
+}
+
+
+/* Grid */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    background: #fff;
+
+    border: 1px solid rgba(23, 61, 52, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(23, 61, 52, 0.13);
+}
+
+
+/* Featured Taxi card */
+
+.service-card-featured {
+    background: #173d34;
+}
+
+.service-card-featured .service-card-content {
+    background: #173d34;
+}
+
+.service-card-featured .service-card-category {
+    color: #d9a441;
+}
+
+.service-card-featured .service-card-content h3 {
+    color: #fff;
+}
+
+.service-card-featured .service-card-content p {
+    color: rgba(255, 255, 255, 0.70);
+}
+
+.service-card-featured .service-card-content a {
+    color: #fff;
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.service-card-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 205px;
+
+    overflow: hidden;
+
+    background: #dfe6e2;
+}
+
+
+/* Image */
+
+.service-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.55s ease;
+}
+
+.service-card:hover .service-card-image img {
+    transform: scale(1.045);
+}
+
+
+/* Dark image overlay */
+
+.service-card-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.04),
+            rgba(0, 0, 0, 0.28)
+        );
+
+    pointer-events: none;
+}
+
+
+/* Number */
+
+.service-card-number {
+    position: absolute;
+
+    top: 18px;
+    left: 19px;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 37px;
+    height: 27px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    color: #173d34;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* Featured number */
+
+.service-card-featured .service-card-number {
+    background: #d9a441;
+
+    color: #173d34;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.service-card-content {
+    min-height: 245px;
+
+    padding: 27px 28px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+
+/* Category */
+
+.service-card-category {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    color: #a47b2d;
+}
+
+
+/* Title */
+
+.service-card-content h3 {
+    margin: 0 0 11px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 22px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -0.025em;
+
+    color: #173d34;
+}
+
+
+/* Paragraph */
+
+.service-card-content p {
+    max-width: 340px;
+
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    color: #69736f;
+}
+
+
+/* Link */
+
+.service-card-content a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    width: fit-content;
+
+    margin-top: auto;
+
+    padding-top: 22px;
+
+    color: #173d34;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    transition:
+        gap 0.25s ease;
+}
+
+.service-card-content a:hover {
+    gap: 14px;
+}
+
+.service-card-content a strong {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   JOURNEY SECTION
+========================================================= */
+
+.services-journey {
+    position: relative;
+
+    padding: 90px 0;
+
+    overflow: hidden;
+
+    background: #173d34;
+
+    color: #fff;
+}
+
+
+/* Mountain background */
+
+.services-journey::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 190px;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(6, 31, 26, 0.35)
+        ),
+        url("../images/destinations/mountain-silhouette.png");
+
+    background-repeat: no-repeat;
+
+    background-size:
+        cover,
+        cover;
+
+    background-position:
+        center,
+        center bottom;
+
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+
+.services-journey > * {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Inner */
+
+.services-journey-inner {
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* Heading */
+
+.services-journey-heading > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: #d9a441;
+}
+
+.services-journey-heading h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(43px, 4.5vw, 64px);
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    letter-spacing: -0.05em;
+
+    color: #fff;
+}
+
+.services-journey-heading h2 em {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #d9a441;
+}
+
+.services-journey-heading > p {
+    max-width: 390px;
+
+    margin: 24px 0 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.67);
+}
+
+
+/* =========================================================
+   JOURNEY STEPS
+========================================================= */
+
+.services-journey-steps {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+
+/* Step */
+
+.journey-step {
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 22px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+
+/* Number */
+
+.journey-step > span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    color: #d9a441;
+}
+
+
+/* Title */
+
+.journey-step strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+
+    color: #fff;
+}
+
+
+/* Text */
+
+.journey-step p {
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .services-hero-content {
+        width: 56%;
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .services-journey-inner {
+        grid-template-columns: 1fr 1.1fr;
+
+        gap: 55px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .services-hero {
+        min-height: 650px;
+    }
+
+    .services-hero-inner {
+        min-height: 650px;
+    }
+
+    .services-hero-content {
+        width: 62%;
+    }
+
+    .services-hero-content h1 {
+        font-size: clamp(48px, 7vw, 70px);
+    }
+
+
+    .services-intro > .services-container {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .services-intro-text p {
+        max-width: 600px;
+    }
+
+
+    .services-journey-inner {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .services-container {
+        width: min(100% - 32px, 600px);
+    }
+
+
+    /* HERO */
+
+    .services-hero {
+        min-height: 680px;
+    }
+
+    .services-hero-background {
+        background-position: 58% center;
+    }
+
+    .services-hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(8, 35, 30, 0.10) 0%,
+                rgba(8, 35, 30, 0.44) 35%,
+                rgba(8, 35, 30, 0.93) 100%
+            );
+    }
+
+    .services-hero-inner {
+        width: min(100% - 32px, 600px);
+
+        min-height: 680px;
+
+        align-items: flex-end;
+
+        padding-bottom: 48px;
+    }
+
+    .services-hero-content {
+        width: 100%;
+
+        padding-top: 100px;
+    }
+
+    .services-hero-eyebrow {
+        margin-bottom: 18px;
+
+        font-size: 10px;
+
+        letter-spacing: 0.13em;
+    }
+
+    .services-hero-content h1 {
+        font-size: clamp(44px, 13vw, 67px);
+    }
+
+    .services-hero-text {
+        margin: 22px 0 25px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+    .services-hero-actions {
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    /* INTRO */
+
+    .services-intro {
+        padding: 72px 0 40px;
+    }
+
+    .services-intro > .services-container {
+        gap: 25px;
+    }
+
+    .services-intro-heading h2 {
+        font-size: 40px;
+    }
+
+    .services-intro-text p {
+        font-size: 14px;
+    }
+
+
+    /* CARDS */
+
+    .services-list-section {
+        padding: 20px 0 75px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .service-card-image {
+        height: 215px;
+    }
+
+    .service-card-content {
+        min-height: 230px;
+
+        padding: 25px;
+    }
+
+
+    /* JOURNEY */
+
+    .services-journey {
+        padding: 70px 0;
+    }
+
+    .services-journey-heading h2 {
+        font-size: 45px;
+    }
+
+    .services-journey-heading > p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .services-hero {
+        min-height: 650px;
+    }
+
+    .services-hero-inner {
+        min-height: 650px;
+    }
+
+    .services-hero-content h1 {
+        font-size: 44px;
+    }
+
+    .services-hero-actions {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .services-intro-heading h2 {
+        font-size: 35px;
+    }
+
+    .service-card-image {
+        height: 195px;
+    }
+
+    .services-journey-heading h2 {
+        font-size: 39px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .service-card,
+    .service-card-image img,
+    .service-card-content a,
+    .services-primary-btn,
+    .services-secondary-btn {
+        transition: none;
+    }
+
+}
