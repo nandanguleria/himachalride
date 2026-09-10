@@ -35,7 +35,7 @@
             rgba(16, 45, 35, 0.45) 65%,
             rgba(16, 45, 35, 0.28) 100%
         ),
-        url("../images/destinations/himachal-hero.jpg.png");
+        url("../images/destinations/himachal-hero.jpg.webp");
 
     background-size: cover;
     background-position: center;
