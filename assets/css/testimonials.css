@@ -609,3 +609,427 @@
     }
 
 }
+
+/* =========================================================
+   HIMACHALRIDE — TRAVEL WITH CONFIDENCE
+   ========================================================= */
+
+.confidence-section {
+    background: #17382b;
+    color: #ffffff;
+}
+
+
+.confidence-container {
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.confidence-heading {
+    max-width: 760px;
+
+    margin-bottom: 55px;
+}
+
+
+.confidence-heading .section-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #d3ad70;
+}
+
+
+.confidence-heading .section-eyebrow::before {
+    content: "";
+
+    width: 26px;
+    height: 1px;
+
+    background: #d3ad70;
+}
+
+
+.confidence-heading h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(45px, 5.5vw, 72px);
+
+    line-height: 0.94;
+
+    letter-spacing: -3px;
+
+    font-weight: 600;
+
+    color: #f5f2e9;
+}
+
+
+.confidence-heading h2 span {
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #9eaea5;
+}
+
+
+.confidence-heading p {
+    max-width: 560px;
+
+    margin: 20px 0 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+    color: rgba(255,255,255,0.62);
+}
+
+
+/* =========================================================
+   CONFIDENCE CARDS
+   ========================================================= */
+
+.confidence-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid rgba(255,255,255,0.14);
+
+    border-left: 1px solid rgba(255,255,255,0.14);
+}
+
+
+.confidence-card {
+    min-height: 285px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    border-right: 1px solid rgba(255,255,255,0.14);
+
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.confidence-card:hover {
+    background: rgba(255,255,255,0.035);
+
+    transform: translateY(-3px);
+}
+
+
+.confidence-number {
+    display: block;
+
+    margin-bottom: 45px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.42);
+}
+
+
+.confidence-label {
+    display: block;
+
+    margin-bottom: 13px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d3ad70;
+}
+
+
+.confidence-card h3 {
+    margin: 0 0 14px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 26px;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    font-weight: 600;
+
+    color: #f5f2e9;
+}
+
+
+.confidence-card h3 em {
+    display: block;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #9eaea5;
+}
+
+
+.confidence-card p {
+    max-width: 300px;
+
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+
+    color: rgba(255,255,255,0.55);
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
+
+.confidence-cta {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    margin-top: 42px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+
+.confidence-cta-copy span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d3ad70;
+}
+
+
+.confidence-cta-copy strong {
+    display: block;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    color: #ffffff;
+}
+
+
+.confidence-cta-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.confidence-whatsapp-btn,
+.confidence-secondary-btn {
+    min-height: 48px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.confidence-whatsapp-btn {
+    background: #d3ad70;
+
+    color: #17382b;
+}
+
+
+.confidence-whatsapp-btn strong {
+    font-size: 14px;
+}
+
+
+.confidence-whatsapp-btn:hover {
+    transform: translateY(-3px);
+
+    background: #e0c083;
+}
+
+
+.confidence-secondary-btn {
+    border: 1px solid rgba(255,255,255,0.22);
+
+    color: #ffffff;
+}
+
+
+.confidence-secondary-btn:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255,255,255,0.08);
+}
+
+
+.confidence-secondary-btn span {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .confidence-section {
+        padding: 70px 0 55px;
+    }
+
+
+    .confidence-container {
+        width: calc(100% - 30px);
+    }
+
+
+    .confidence-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .confidence-heading h2 {
+        font-size: 45px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .confidence-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .confidence-card {
+        min-height: 250px;
+
+        padding: 22px;
+    }
+
+
+    .confidence-number {
+        margin-bottom: 32px;
+    }
+
+
+    .confidence-cta {
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 22px;
+
+        margin-top: 30px;
+    }
+
+
+    .confidence-cta-actions {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .confidence-whatsapp-btn,
+    .confidence-secondary-btn {
+        width: 100%;
+    }
+
+}

@@ -1634,3 +1634,466 @@
     }
 
 }
+
+/* =========================================================
+   POPULAR TAXI ROUTES
+   ========================================================= */
+
+.taxi-routes-section {
+    padding: 100px
+        max(25px, calc((100% - 1180px) / 2))
+        105px;
+
+    background: #f5f1e8;
+}
+
+.taxi-routes-inner {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* ---------------------------------------------------------
+   HEADING
+   --------------------------------------------------------- */
+
+.taxi-routes-heading {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 55px;
+}
+
+.taxi-routes-heading .tours-eyebrow {
+    grid-column: 1 / -1;
+}
+
+.taxi-routes-heading h2 {
+    margin: 0;
+    color: var(--tour-green);
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: .88;
+    letter-spacing: -.065em;
+}
+
+.taxi-routes-heading h2 em {
+    display: block;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--tour-gold);
+}
+
+.taxi-routes-heading p {
+    max-width: 430px;
+    margin: 0;
+    color: var(--tour-muted);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   ROUTE GRID
+   --------------------------------------------------------- */
+
+.taxi-routes-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+
+/* ---------------------------------------------------------
+   ROUTE CARD
+   --------------------------------------------------------- */
+
+.taxi-route-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+
+    min-height: 245px;
+    padding: 28px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid var(--tour-border);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.taxi-route-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(16, 63, 53, .28);
+
+    box-shadow:
+        0 18px 38px
+        rgba(16, 63, 53, .10);
+}
+
+
+/* ---------------------------------------------------------
+   NUMBER
+   --------------------------------------------------------- */
+
+.taxi-route-number {
+    padding-top: 3px;
+
+    color: var(--tour-gold);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENT
+   --------------------------------------------------------- */
+
+.taxi-route-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.taxi-route-content > span {
+    margin-bottom: 17px;
+
+    color: var(--tour-muted);
+
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.taxi-route-content h3 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 0;
+
+    color: var(--tour-green);
+
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1;
+    letter-spacing: -.045em;
+}
+
+.taxi-route-content h3 strong {
+    color: var(--tour-gold);
+
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.taxi-route-content p {
+    max-width: 390px;
+
+    margin: 17px 0 22px;
+
+    color: var(--tour-muted);
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   WHATSAPP BUTTON
+   --------------------------------------------------------- */
+
+.taxi-route-content a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    min-height: 42px;
+
+    margin-top: auto;
+    padding: 0 9px 0 15px;
+
+    box-sizing: border-box;
+
+    background: var(--tour-green);
+    color: #ffffff;
+
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+.taxi-route-content a strong {
+    display: grid;
+    place-items: center;
+
+    width: 25px;
+    height: 25px;
+
+    flex: 0 0 25px;
+
+    background: var(--tour-gold);
+    color: var(--tour-green);
+
+    font-size: 12px;
+    font-weight: 400;
+
+    transition:
+        transform .25s ease;
+}
+
+.taxi-route-content a:hover {
+    background: var(--tour-green-dark);
+    transform: translateY(-2px);
+}
+
+.taxi-route-content a:hover strong {
+    transform: translate(2px, -2px);
+}
+
+
+/* ---------------------------------------------------------
+   BOTTOM ENQUIRY
+   --------------------------------------------------------- */
+
+.taxi-routes-bottom {
+    display: grid;
+    grid-template-columns: .7fr 1.3fr auto;
+    align-items: center;
+    gap: 35px;
+
+    margin-top: 18px;
+    padding: 27px 30px;
+
+    background: var(--tour-green);
+    color: #ffffff;
+}
+
+.taxi-routes-bottom > span {
+    color: var(--tour-gold);
+
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .18em;
+}
+
+.taxi-routes-bottom p {
+    margin: 0;
+
+    color: rgba(255,255,255,.62);
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.taxi-routes-bottom a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 42px;
+    padding: 0 9px 0 16px;
+
+    background: #ffffff;
+    color: var(--tour-green);
+
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.taxi-routes-bottom a strong {
+    display: grid;
+    place-items: center;
+
+    width: 25px;
+    height: 25px;
+
+    background: var(--tour-gold);
+    color: var(--tour-green);
+
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.taxi-routes-bottom a:hover {
+    transform: translateY(-2px);
+    background: #f8f8f8;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .taxi-routes-section {
+        padding:
+            75px
+            25px
+            80px;
+    }
+
+    .taxi-routes-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 45px;
+    }
+
+    .taxi-routes-heading .tours-eyebrow {
+        grid-column: auto;
+    }
+
+    .taxi-routes-heading p {
+        max-width: 600px;
+    }
+
+    .taxi-routes-bottom {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .taxi-routes-bottom a {
+        justify-self: start;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+    .taxi-routes-section {
+        padding:
+            62px
+            15px
+            70px;
+    }
+
+    .taxi-routes-heading {
+        margin-bottom: 35px;
+    }
+
+    .taxi-routes-heading h2 {
+        font-size:
+            clamp(
+                44px,
+                13vw,
+                62px
+            );
+    }
+
+    .taxi-routes-heading p {
+        font-size: 12px;
+    }
+
+    .taxi-routes-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .taxi-route-card {
+        min-height: 225px;
+        padding: 23px 20px;
+        grid-template-columns: 35px 1fr;
+        gap: 15px;
+    }
+
+    .taxi-route-content h3 {
+        font-size: 30px;
+    }
+
+    .taxi-route-content p {
+        font-size: 10px;
+    }
+
+    .taxi-route-content a {
+        width: 100%;
+    }
+
+    .taxi-routes-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        padding: 25px 20px;
+    }
+
+    .taxi-routes-bottom p {
+        font-size: 11px;
+    }
+
+    .taxi-routes-bottom a {
+        width: 100%;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+    .taxi-routes-section {
+        padding:
+            54px
+            12px
+            62px;
+    }
+
+    .taxi-route-card {
+        min-height: 215px;
+        padding: 20px 17px;
+    }
+
+    .taxi-route-content h3 {
+        font-size: 27px;
+    }
+
+    .taxi-route-content h3 strong {
+        font-size: 16px;
+    }
+
+    .taxi-route-content a {
+        font-size: 6.5px;
+    }
+
+}

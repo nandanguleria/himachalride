@@ -1002,3 +1002,197 @@
         line-height: 1.8;
     }
 }
+
+/* =========================================================
+   DESTINATION CONVERSION CTA
+   ========================================================= */
+
+.destinations-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.destinations-bottom-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.destinations-bottom-info > span {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.destinations-bottom-info p {
+    margin: 0;
+    max-width: 440px;
+
+    color: rgba(18, 63, 54, 0.62);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.destinations-bottom-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.destination-whatsapp-btn,
+.destination-view-btn {
+    min-height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    transition:
+        transform 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.destination-whatsapp-btn {
+    background: #123f36;
+    color: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(18, 63, 54, 0.16);
+}
+
+.destination-whatsapp-btn strong {
+    width: 24px;
+    height: 24px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #e5bd6b;
+    color: #123f36;
+}
+
+.destination-whatsapp-btn:hover {
+    transform: translateY(-2px);
+    background: #0b302a;
+}
+
+.destination-view-btn {
+    border: 1px solid rgba(18, 63, 54, 0.18);
+    color: #123f36;
+}
+
+.destination-view-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(18, 63, 54, 0.05);
+}
+
+.destination-view-btn strong {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .destinations-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .destinations-bottom-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .destination-whatsapp-btn,
+    .destination-view-btn {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   FIX - DESTINATION WHATSAPP CTA TEXT
+   ========================================================= */
+
+.destination-whatsapp-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+
+    min-height: 46px !important;
+    width: auto !important;
+    min-width: 260px !important;
+
+    padding: 0 18px 0 22px !important;
+
+    background: #123f36 !important;
+    color: #ffffff !important;
+
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.5px !important;
+
+    text-decoration: none !important;
+    white-space: nowrap !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.destination-whatsapp-btn:hover {
+    background: #0b302a !important;
+    color: #ffffff !important;
+}
+
+.destination-whatsapp-btn strong {
+    display: grid !important;
+    place-items: center !important;
+
+    width: 24px !important;
+    height: 24px !important;
+
+    flex: 0 0 24px !important;
+
+    border-radius: 50% !important;
+
+    background: #e5bd6b !important;
+    color: #123f36 !important;
+
+    font-size: 14px !important;
+    line-height: 1 !important;
+}
+
+.destination-whatsapp-btn strong:hover {
+    color: #123f36 !important;
+}
+
+@media (max-width: 760px) {
+
+    .destination-whatsapp-btn {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+}

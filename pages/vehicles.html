@@ -962,6 +962,82 @@
         );
 
     });
+
+        /* =====================================================
+           VEHICLE WHATSAPP ENQUIRY CTA
+           ===================================================== */
+
+        const vehicleWhatsAppData = {
+            traveller: "Tempo Traveller",
+            crysta: "Innova Crysta",
+            urbania: "Urbania",
+            dzire: "Swift Dzire",
+            ertiga: "Ertiga"
+        };
+
+        document
+            .querySelectorAll(".vehicle-card")
+            .forEach(function (card) {
+
+                const galleryButton =
+                    card.querySelector(".gallery-open");
+
+                if (!galleryButton) {
+                    return;
+                }
+
+                const vehicleKey =
+                    galleryButton.dataset.gallery;
+
+                const vehicleName =
+                    vehicleWhatsAppData[vehicleKey];
+
+                if (!vehicleName) {
+                    return;
+                }
+
+                const message =
+                    "Hello HimachalRide,%0A%0A" +
+                    "I am interested in booking a " +
+                    encodeURIComponent(vehicleName) +
+                    ".%0A%0A" +
+                    "Travel Date:%0A" +
+                    "Pickup Location:%0A" +
+                    "Destination:%0A" +
+                    "Number of Travellers:%0A%0A" +
+                    "Please share availability and the best price.";
+
+                const enquiryButton =
+                    document.createElement("a");
+
+                enquiryButton.className =
+                    "vehicle-whatsapp-btn";
+
+                enquiryButton.href =
+                    "https://wa.me/919805664108?text=" +
+                    message;
+
+                enquiryButton.target = "_blank";
+                enquiryButton.rel =
+                    "noopener noreferrer";
+
+                enquiryButton.innerHTML = `
+                    <span>Enquire on WhatsApp</span>
+                    <strong>↗</strong>
+                `;
+
+                const tags =
+                    card.querySelector(".vehicle-tags");
+
+                if (tags) {
+                    tags.insertAdjacentElement(
+                        "afterend",
+                        enquiryButton
+                    );
+                }
+
+            });
+
 </script>
 
 </body>

@@ -416,3 +416,114 @@
     }
 
 }
+
+/* =========================================================
+   TRUST WHATSAPP CTA
+   ========================================================= */
+
+.trust-whatsapp-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    width: 235px;
+    min-height: 48px;
+
+    margin-top: 30px;
+
+    padding: 0 10px 0 18px;
+
+    box-sizing: border-box;
+
+    background: #123f35;
+    color: #ffffff;
+
+    border: 1px solid #123f35;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.trust-whatsapp-btn strong {
+    width: 28px;
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #d3ad70;
+
+    color: #123f35;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.trust-whatsapp-btn:hover {
+    transform: translateY(-3px);
+
+    background: #0b3029;
+
+    box-shadow:
+        0 12px 28px rgba(18, 63, 53, 0.16);
+}
+
+
+.trust-whatsapp-btn:hover strong {
+    transform: translate(2px, -2px);
+
+    background: #e0c083;
+}
+
+
+/* =========================================================
+   FOURTH TRUST STAT
+   ========================================================= */
+
+.trust-stats .trust-stat:last-child {
+    border-bottom: 1px solid rgba(23, 37, 31, 0.14);
+}
+
+
+/* =========================================================
+   MOBILE CTA
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .trust-whatsapp-btn {
+        width: 100%;
+
+        margin-top: 25px;
+
+        min-height: 50px;
+    }
+
+}

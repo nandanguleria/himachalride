@@ -1280,3 +1280,93 @@ body.modal-open {
         transition: none !important;
     }
 }
+
+
+/* =========================================================
+   VEHICLE WHATSAPP ENQUIRY BUTTON
+   ========================================================= */
+
+.vehicles-page .vehicle-whatsapp-btn {
+    width: 100%;
+    min-height: 46px;
+
+    margin-top: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 0 10px 0 17px;
+
+    background: var(--fleet-green);
+    color: #fff;
+
+    border: 1px solid var(--fleet-green);
+
+    text-decoration: none;
+
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 800;
+
+    letter-spacing: .12em;
+    text-transform: uppercase;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+.vehicles-page .vehicle-whatsapp-btn strong {
+    width: 28px;
+    height: 28px;
+
+    flex: 0 0 28px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--fleet-gold);
+    color: var(--fleet-green);
+
+    font-size: 13px;
+    line-height: 1;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.vehicles-page .vehicle-whatsapp-btn:hover {
+    transform: translateY(-2px);
+
+    background: var(--fleet-deep);
+
+    box-shadow:
+        0 12px 28px rgba(18, 63, 54, .16);
+}
+
+.vehicles-page .vehicle-whatsapp-btn:hover strong {
+    transform: translate(2px, -2px);
+    background: var(--fleet-gold-light);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .vehicles-page .vehicle-whatsapp-btn {
+        min-height: 48px;
+
+        padding-left: 16px;
+
+        font-size: 8px;
+    }
+
+}
